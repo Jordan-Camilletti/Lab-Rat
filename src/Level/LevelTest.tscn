@@ -34,7 +34,7 @@ points = PoolVector2Array( 0, 0, 20, 0, 20, 24, 0, 24 )
 } ]
 1/z_index = 0
 
-[node name="LevelTest" type="Node2D"]
+[node name="Level" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
@@ -46,3 +46,6 @@ tile_data = PoolIntArray( -1, 1, 0, -65536, 1, 0, -65535, 1, 0, -65534, 1, 0, -6
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 466, 328 )
+
+[node name="Player2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 459.421, 365.45 )
