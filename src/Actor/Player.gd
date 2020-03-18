@@ -3,6 +3,7 @@ extends Actor
 func _physics_process(delta):
 	look_at(get_global_mouse_position())
 	velocity = calculateMovement(getSpeed(), getDirection())
+	checkWeap()
 
 func getDirection() -> Vector2:
 	return(Vector2(
@@ -21,7 +22,6 @@ func calculateMovement(
 ) -> Vector2:
 	return(s*d)
 
-func getHeading() -> int:
-	var mousePos=get_viewport().get_mouse_position()
-	print((0.5*get_viewport().size.y)-mousePos[1])
-	return(0)
+func checkWeap():
+	if(Input.get_action_strength("shoot")>0):
+		get_node("weaponIcon").texture=load("res://assets/Weapons/knife.png")
