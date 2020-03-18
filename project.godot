@@ -24,10 +24,6 @@ config/name="Aftershock"
 run/main_scene="res://src/Level/LevelTest.tscn"
 config/icon="res://assets/icon.png"
 
-[display]
-
-window/size/fullscreen=true
-
 [input]
 
 moveLeft={

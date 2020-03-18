@@ -1,8 +1,8 @@
 extends Actor
 
 func _physics_process(delta):
+	look_at(get_global_mouse_position())
 	velocity = calculateMovement(getSpeed(), getDirection())
-	getHeading()
 
 func getDirection() -> Vector2:
 	return(Vector2(
@@ -22,7 +22,6 @@ func calculateMovement(
 	return(s*d)
 
 func getHeading() -> int:
-	var projectResolution=Vector2(Globals.get("display/width"),Globals.get("display/height"))
 	var mousePos=get_viewport().get_mouse_position()
-	print(mousePos)
+	print((0.5*get_viewport().size.y)-mousePos[1])
 	return(0)
