@@ -22,6 +22,8 @@ func calculateMovement(
 ) -> Vector2:
 	return(s*d)
 
+
 func checkWeap():
 	if(Input.get_action_strength("shoot")>0):
-		get_node("weaponIcon").texture=load("res://assets/Weapons/knife.png")
+		get_node("gun").texture=load("res://assets/Weapons/gun.png")
+		get_node("stab").texture=load("res://assets/Weapons/knife.png")

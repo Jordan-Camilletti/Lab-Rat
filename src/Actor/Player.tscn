@@ -23,5 +23,8 @@ shape = SubResource( 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 
-[node name="weaponIcon" type="Sprite" parent="."]
+[node name="gun" type="Sprite" parent="."]
 position = Vector2( 31.4841, -16.9385 )
+
+[node name="stab" type="Sprite" parent="."]
+position = Vector2( 31.4841, 20.6833 )
