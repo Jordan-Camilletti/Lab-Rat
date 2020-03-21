@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/icon.png" type="Texture" id=1]
 [ext_resource path="res://src/Actor/Player.gd" type="Script" id=2]
+[ext_resource path="res://src/Weapons/Melee/Melee.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3.98998, 15.9795 )
@@ -23,8 +24,5 @@ shape = SubResource( 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 
-[node name="gun" type="Sprite" parent="."]
-position = Vector2( 31.4841, -16.9385 )
-
-[node name="stab" type="Sprite" parent="."]
-position = Vector2( 31.4841, 20.6833 )
+[node name="Melee" parent="." instance=ExtResource( 3 )]
+position = Vector2( 32, 20 )

@@ -3,7 +3,8 @@ extends Actor
 func _physics_process(delta):
 	look_at(get_global_mouse_position())
 	velocity = calculateMovement(getSpeed(), getDirection())
-	checkWeap()
+	if(Input.get_action_strength("takeOutEquipedItem")>0):
+		$Melee/sprite.visible = not $Melee/sprite.visible
 
 func getDirection() -> Vector2:
 	return(Vector2(
@@ -21,9 +22,3 @@ func calculateMovement(
 	d: Vector2
 ) -> Vector2:
 	return(s*d)
-
-
-func checkWeap():
-	if(Input.get_action_strength("shoot")>0):
-		get_node("gun").texture=load("res://assets/Weapons/gun.png")
-		get_node("stab").texture=load("res://assets/Weapons/knife.png")
