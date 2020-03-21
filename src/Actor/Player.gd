@@ -3,9 +3,11 @@ extends Actor
 func _physics_process(delta):
 	look_at(get_global_mouse_position())
 	velocity = calculateMovement(getSpeed(), getDirection())
-	if(Input.get_action_strength("takeOutEquipedItem")>0):
-		$Melee/sprite.visible = not $Melee/sprite.visible
 
+func _input(event):
+	if(event.is_action_pressed("takeOutEquipedItem")):
+		$Weapon/sprite.visible = not $Weapon/sprite.visible
+#if event.is_action_pressed("key_left"): print("left key pressed")
 func getDirection() -> Vector2:
 	return(Vector2(
 		Input.get_action_strength("moveRight")-Input.get_action_strength("moveLeft"),
