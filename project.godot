@@ -14,6 +14,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Actor/Actor.gd"
 }, {
+"base": "Weapon",
+"class": "Ranged",
+"language": "GDScript",
+"path": "res://src/Weapons/Ranged/Ranged.gd"
+}, {
+"base": "Ranged",
+"class": "TestKnife",
+"language": "GDScript",
+"path": "res://src/Weapons/Melee/TestKnife/TestKnife.gd"
+}, {
 "base": "Node",
 "class": "Weapon",
 "language": "GDScript",
@@ -21,6 +31,8 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Actor": "",
+"Ranged": "",
+"TestKnife": "",
 "Weapon": ""
 }
 

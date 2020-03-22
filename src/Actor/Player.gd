@@ -6,13 +6,9 @@ TODO:
 	Have weapons be usable
 	Create animations
 """
-func _physics_process(delta):
+func _process(delta):
 	look_at(get_global_mouse_position())
 	velocity = calculateMovement(getSpeed(), getDirection())
-
-func _input(event):
-	if(event.is_action_pressed("takeOutEquipedItem")):
-		$Weapon/sprite.visible = not $Weapon/sprite.visible
 
 func getDirection() -> Vector2:
 	return(Vector2(
