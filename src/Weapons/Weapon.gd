@@ -1,4 +1,5 @@
 extends Node
+class_name Weapon
 
 var icon
 var dist
@@ -10,11 +11,6 @@ func _init(i,di,da,w):
 	dist=di
 	damage=da
 	weight=w
-
-func _physics_process(delta):
-	print("owo")
-	#if(Input.get_action_strength("shoot")>0):
-	#$sprite.texture=load("res://assets/Weapons/knife.png")
 
 func getName():
 	return(name)

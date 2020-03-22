@@ -1,1 +1,1 @@
-extends "res://src/Weapons/Weapon.gd"
+extends Weapon
