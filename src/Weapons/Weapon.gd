@@ -12,8 +12,9 @@ func _init(i,di,da,w):
 	weight=w
 
 func _physics_process(delta):
+	print("owo")
 	#if(Input.get_action_strength("shoot")>0):
-	$sprite.texture=load("res://assets/Weapons/knife.png")
+	#$sprite.texture=load("res://assets/Weapons/knife.png")
 
 func getName():
 	return(name)
