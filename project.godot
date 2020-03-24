@@ -15,11 +15,21 @@ _global_script_classes=[ {
 "path": "res://src/Actor/Actor.gd"
 }, {
 "base": "Weapon",
+"class": "Melee",
+"language": "GDScript",
+"path": "res://src/Weapons/Melee/Melee.gd"
+}, {
+"base": "Weapon",
 "class": "Ranged",
 "language": "GDScript",
 "path": "res://src/Weapons/Ranged/Ranged.gd"
 }, {
 "base": "Ranged",
+"class": "TestGun",
+"language": "GDScript",
+"path": "res://src/Weapons/Ranged/TestGun/TestGun.gd"
+}, {
+"base": "Melee",
 "class": "TestKnife",
 "language": "GDScript",
 "path": "res://src/Weapons/Melee/TestKnife/TestKnife.gd"
@@ -31,7 +41,9 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Actor": "",
+"Melee": "",
 "Ranged": "",
+"TestGun": "",
 "TestKnife": "",
 "Weapon": ""
 }
