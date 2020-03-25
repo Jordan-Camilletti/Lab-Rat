@@ -9,13 +9,14 @@ func _input(event):
 	if(!globalVars.inventoryOpen):
 		if(event.is_action_pressed("takeOutEquipedItem")):
 			testAdd()
-	if(event.is_action_pressed("openInventory")):
-		overlayInventory()
+		if(event.is_action_pressed("openInventory")):
+			overlayInventory()
 
 func overlayInventory():
 	globalVars.inventoryOpen=true
-	var node = load("res://src/Level/Inventory.tscn").instance()
-	get_node("/root/Level").add_child(node)
+	get_tree().change_scene("res://src/Level/Inventory.tscn")
+	#var node = load("res://src/Level/Inventory.tscn").instance()
+	#get_node("/root/Level").add_child(node)
 
 func testAdd():
 	var rand = RandomNumberGenerator.new()
