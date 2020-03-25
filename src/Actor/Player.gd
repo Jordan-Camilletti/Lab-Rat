@@ -12,9 +12,10 @@ var slowdownConstant: = 0.4#The 'friction' constant
 var velocity: = Vector2.ZERO
 
 func _physics_process(delta):
-	look_at(get_global_mouse_position())
-	velocity += getAcceleration(velocity)
-	velocity = move_and_slide(velocity)
+	if(!globalVars.inventoryOpen):
+		look_at(get_global_mouse_position())
+		velocity += getAcceleration(velocity)
+		velocity = move_and_slide(velocity)
 	
 
 func getDirection() -> Vector2:

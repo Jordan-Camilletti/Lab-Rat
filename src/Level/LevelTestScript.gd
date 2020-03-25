@@ -6,12 +6,14 @@ func _ready():
 	add_child(player)
 	
 func _input(event):
-	if(event.is_action_pressed("takeOutEquipedItem")):
-		testAdd()
+	if(!globalVars.inventoryOpen):
+		if(event.is_action_pressed("takeOutEquipedItem")):
+			testAdd()
 	if(event.is_action_pressed("openInventory")):
 		overlayInventory()
 
 func overlayInventory():
+	globalVars.inventoryOpen=true
 	var node = load("res://src/Level/Inventory.tscn").instance()
 	get_node("/root/Level").add_child(node)
 
