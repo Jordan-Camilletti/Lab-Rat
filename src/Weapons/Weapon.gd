@@ -1,4 +1,4 @@
-extends Node
+extends KinematicBody2D
 class_name Weapon
 
 var icon
@@ -6,11 +6,11 @@ var dist
 var damage
 var weight
 
-func _init(i,di,da,w):
+"""func _init(i,di,da,w):
 	icon=i
 	dist=di
 	damage=da
-	weight=w
+	weight=w"""
 
 func getName():
 	return(name)

@@ -6,13 +6,17 @@ TODO:
 	Have weapons be usable
 	Create animations
 """
-func _physics_process(delta):
-	look_at(get_global_mouse_position())
-	velocity = calculateMovement(getSpeed(), getDirection())
+var walkAcceleration: = 80#Base walk speed
+var runMultiplier: = 1.5#How much faster running is compared to walking
+var slowdownConstant: = 0.4#The 'friction' constant
+var velocity: = Vector2.ZERO
 
-func _input(event):
-	if(event.is_action_pressed("takeOutEquipedItem")):
-		$Weapon/sprite.visible = not $Weapon/sprite.visible
+func _physics_process(delta):
+	if(!globalVars.inventoryOpen):
+		look_at(get_global_mouse_position())
+		velocity += getAcceleration(velocity)
+		velocity = move_and_slide(velocity)
+	
 
 func getDirection() -> Vector2:
 	return(Vector2(
@@ -20,13 +24,11 @@ func getDirection() -> Vector2:
 		Input.get_action_strength("moveDown")-Input.get_action_strength("moveUp")
 	))
 
-func getSpeed() -> Vector2:
+func getAcceleration(vel:Vector2) -> Vector2:
+	var rtn=getDirection()
+	rtn*=walkAcceleration#Initial directions
 	if(Input.get_action_strength("run")>0):
-		return(walkSpeed*runSpeed)
-	return(walkSpeed)
-
-func calculateMovement(
-	s: Vector2,
-	d: Vector2
-) -> Vector2:
-	return(s*d)
+		rtn*=runMultiplier#Faster if running
+	for n in range(0,2):
+		rtn[n]-=(vel[n]*slowdownConstant)#Slowing down to cap the speed
+	return(rtn)
