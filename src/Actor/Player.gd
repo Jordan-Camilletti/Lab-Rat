@@ -3,7 +3,10 @@ extends Actor
 """
 TODO:
 	Create inventory
-	Have weapons be usable
+	Create item system
+	Create & test doors 
+	Create & test end goals
+	Create & test multiple levels
 	Create animations
 """
 var walkAcceleration: = 80#Base walk speed
