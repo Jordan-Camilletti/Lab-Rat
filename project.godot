@@ -17,27 +17,27 @@ _global_script_classes=[ {
 "base": "Weapon",
 "class": "Melee",
 "language": "GDScript",
-"path": "res://src/Weapons/Melee/Melee.gd"
+"path": "res://src/Items/Melee/Melee.gd"
 }, {
 "base": "Weapon",
 "class": "Ranged",
 "language": "GDScript",
-"path": "res://src/Weapons/Ranged/Ranged.gd"
+"path": "res://src/Items/Ranged/Ranged.gd"
 }, {
 "base": "Ranged",
 "class": "TestGun",
 "language": "GDScript",
-"path": "res://src/Weapons/Ranged/TestGun/TestGun.gd"
+"path": "res://src/Items/Ranged/TestGun/TestGun.gd"
 }, {
 "base": "Melee",
 "class": "TestKnife",
 "language": "GDScript",
-"path": "res://src/Weapons/Melee/TestKnife/TestKnife.gd"
+"path": "res://src/Items/Melee/TestKnife/TestKnife.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "Weapon",
 "language": "GDScript",
-"path": "res://src/Weapons/Weapon.gd"
+"path": "res://src/Items/Weapon.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",
@@ -51,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Aftershock"
-run/main_scene="res://src/Level/LevelTest.tscn"
+run/main_scene="res://src/Levels/LevelTest.tscn"
 config/icon="res://assets/icon.png"
 
 [autoload]

@@ -9,4 +9,4 @@ func _input(event):
 
 func closeInventory():
 	globalVars.inventoryOpen=false
-	get_tree().change_scene("res://src/Level/LevelTest.tscn")
+	get_tree().change_scene("res://src/Levels/LevelTest.tscn")

@@ -14,14 +14,14 @@ func _input(event):
 
 func overlayInventory():
 	globalVars.inventoryOpen=true
-	get_tree().change_scene("res://src/Level/Inventory.tscn")
+	get_tree().change_scene("res://src/Levels/Inventory.tscn")
 	#var node = load("res://src/Level/Inventory.tscn").instance()
 	#get_node("/root/Level").add_child(node)
 
 func testAdd():
 	var rand = RandomNumberGenerator.new()
-	var knife = load("res://src/Weapons/Melee/TestKnife/TestKnife.tscn").instance()
-	var gun = load("res://src/Weapons/Ranged/TestGun/TestGun.tscn").instance()
+	var knife = load("res://src/Items/Melee/TestKnife/TestKnife.tscn").instance()
+	var gun = load("res://src/Items/Ranged/TestGun/TestGun.tscn").instance()
 	rand.randomize()
 	knife.position.x=rand.randf_range(0,60)
 	knife.position.y=rand.randf_range(0,60)
