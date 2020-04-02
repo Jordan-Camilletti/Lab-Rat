@@ -12,16 +12,7 @@ func _input(event):
 		testAdd()
 
 func testAdd():
-	var rand = RandomNumberGenerator.new()
-	rand.randomize()
-	var randOrb = rand.randi()%6
-	var orbLinks=["Blue","Green","Orange","Purple","Red","Yellow"]
-	var testOrb=load("res://src/Tests/Orbs/OrbBlue.tscn").instance()
-	#str("res://assets/Tests/Orbs/orb"+orbLinks[randOrb]+".png")
-	testOrb.position.x=30
-	testOrb.position.y=30
-	add_child(testOrb)
-	print(randOrb)
+	print("OwO")
 
 func closeInventory():
 	globalVars.inventoryOpen=false
