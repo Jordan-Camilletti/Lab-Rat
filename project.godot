@@ -13,39 +13,9 @@ _global_script_classes=[ {
 "class": "Actor",
 "language": "GDScript",
 "path": "res://src/Actor/Actor.gd"
-}, {
-"base": "Weapon",
-"class": "Melee",
-"language": "GDScript",
-"path": "res://src/Items/Melee/Melee.gd"
-}, {
-"base": "Weapon",
-"class": "Ranged",
-"language": "GDScript",
-"path": "res://src/Items/Ranged/Ranged.gd"
-}, {
-"base": "Ranged",
-"class": "TestGun",
-"language": "GDScript",
-"path": "res://src/Items/Ranged/TestGun/TestGun.gd"
-}, {
-"base": "Melee",
-"class": "TestKnife",
-"language": "GDScript",
-"path": "res://src/Items/Melee/TestKnife/TestKnife.gd"
-}, {
-"base": "KinematicBody2D",
-"class": "Weapon",
-"language": "GDScript",
-"path": "res://src/Items/Weapon.gd"
 } ]
 _global_script_class_icons={
-"Actor": "",
-"Melee": "",
-"Ranged": "",
-"TestGun": "",
-"TestKnife": "",
-"Weapon": ""
+"Actor": ""
 }
 
 [application]
