@@ -22,7 +22,7 @@ var collision: = null
 func _physics_process(delta):
 	if(!globalVars.inventoryOpen):
 		look_at(get_global_mouse_position())
-		print(str(self.move_and_collide(velocity*delta)))
+		self.move_and_collide(velocity*delta)
 		#print(collision)
 		velocity += getAcceleration(velocity)
 		#velocity = move_and_slide(velocity)
@@ -41,3 +41,7 @@ func getAcceleration(vel:Vector2) -> Vector2:
 	for n in range(0,2):
 		rtn[n]-=(vel[n]*slowdownConstant)#Slowing down to cap the speed
 	return(rtn)
+
+
+func _on_Area2D_area_entered(area):#When player hits object
+	print("X")
