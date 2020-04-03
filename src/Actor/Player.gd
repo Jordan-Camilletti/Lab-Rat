@@ -17,12 +17,13 @@ var collision: = null
 
 """var kb2d = self.move_and_collide(velocity*delta)
   if (kb2d):
-		print(ollided with + str(kb2d.collider_id))"""
+		print(collided with + str(kb2d.collider_id))"""
 
 func _physics_process(delta):
 	if(!globalVars.inventoryOpen):
-		collision=(self.move_and_collide(velocity*delta))
 		look_at(get_global_mouse_position())
+		print(str(self.move_and_collide(velocity*delta)))
+		#print(collision)
 		velocity += getAcceleration(velocity)
 		#velocity = move_and_slide(velocity)
 
