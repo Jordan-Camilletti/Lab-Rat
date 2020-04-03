@@ -1,18 +1,17 @@
 extends Node2D
 
-var inventory: = []
-
 func _ready():
-	pass # Replace with function body.
+	for i in globalVars.inventory:
+		print(i)
 
 func _input(event):
 	if(event.is_action_pressed("openInventory")):
 		closeInventory()
 	if(event.is_action_pressed("testAddInventory")):
-		testAdd()
+		testAdd("A")
 
-func testAdd():
-	print("OwO")
+func testAdd(item):
+	globalVars.inventory.append(item)
 
 func closeInventory():
 	globalVars.inventoryOpen=false
