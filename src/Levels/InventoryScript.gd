@@ -16,3 +16,5 @@ func testAdd(item):
 func closeInventory():
 	globalVars.inventoryOpen=false
 	get_tree().change_scene("res://src/Levels/LevelTest.tscn")
+"""TODO:
+	Have inventory show uip stuff on here"""
