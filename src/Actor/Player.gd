@@ -13,11 +13,6 @@ var walkAcceleration: = 80#Base walk speed
 var runMultiplier: = 1.5#How much faster running is compared to walking
 var slowdownConstant: = 0.4#The 'friction' constant
 var velocity: = Vector2.ZERO
-var collision: = null
-
-"""var kb2d = self.move_and_collide(velocity*delta)
-  if (kb2d):
-		print(collided with + str(kb2d.collider_id))"""
 
 func _physics_process(delta):
 	if(!globalVars.inventoryOpen):
@@ -42,6 +37,5 @@ func getAcceleration(vel:Vector2) -> Vector2:
 		rtn[n]-=(vel[n]*slowdownConstant)#Slowing down to cap the speed
 	return(rtn)
 
-
-func _on_Area2D_area_entered(area):#When player hits object
-	print("X")
+#func _on_Area2D_area_entered(area):#When player hits object
+	#print(area)
