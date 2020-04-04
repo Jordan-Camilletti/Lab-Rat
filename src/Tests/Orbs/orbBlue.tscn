@@ -4,6 +4,8 @@
 [ext_resource path="res://assets/Tests/Orbs/orbBlue.png" type="Texture" id=2]
 
 [node name="KinematicBody2D" instance=ExtResource( 1 )]
+collision_layer = 2
+collision_mask = 1
 
-[node name="Sprite" parent="." index="0"]
+[node name="Sprite" parent="." index="1"]
 texture = ExtResource( 2 )

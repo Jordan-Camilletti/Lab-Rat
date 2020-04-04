@@ -35,7 +35,10 @@ func getAcceleration(vel:Vector2) -> Vector2:
 	for n in range(0,2):
 		rtn[n]-=(vel[n]*slowdownConstant)#Slowing down to cap the speed
 	return(rtn)
+	
+func _on_RedOrbPickup_area_entered(area) -> void:
+	print("Red")
 
 
-func _on_ItemPickup_area_entered(area) -> void:
-	print(area)
+func _on_BlueOrbPickup_body_entered(body):
+	print("Blue")
