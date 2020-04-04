@@ -1,5 +1,12 @@
 extends Node2D
 
+"""
+TODO:
+	Highlight currently selected square
+	Have math be based on screen size instead of hard-coded
+	Have way to move items to player
+"""
+
 func _ready():
 	var add=""
 	for n in range(len(globalVars.inventoryIDs)):
