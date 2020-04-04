@@ -6,6 +6,8 @@ extends Node
 	Adding a node child"""
 	
 func _input(event):#Level Input
+	if(event.is_action_pressed("exitGame")):
+		get_tree().quit()
 	if(!globalVars.inventoryOpen):
 		if(event.is_action_pressed("takeOutEquipedItem")):
 			testAdd()

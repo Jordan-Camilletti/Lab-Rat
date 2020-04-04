@@ -8,7 +8,9 @@ func _ready():
 	for n in globalVars.inventoryIDs:
 		print("res://assets/"+globalVars.spriteDict.get(n))
 
-func _input(event):#Inventory input
+func _input(event):#Inventory Input
+	if(event.is_action_pressed("exitGame")):
+		get_tree().quit()
 	if(event.is_action_pressed("openInventory")):
 		closeInventory("res://src/Levels/LevelTest.tscn")
 	if(event.is_action_pressed("testAddInventory")):
