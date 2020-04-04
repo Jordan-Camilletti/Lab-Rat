@@ -2,7 +2,6 @@ extends Actor
 
 """
 TODO:
-	Create inventory
 	Create item system
 	Create & test doors 
 	Create & test end goals
@@ -37,5 +36,6 @@ func getAcceleration(vel:Vector2) -> Vector2:
 		rtn[n]-=(vel[n]*slowdownConstant)#Slowing down to cap the speed
 	return(rtn)
 
-#func _on_Area2D_area_entered(area):#When player hits object
-	#print(area)
+
+func _on_ItemPickup_area_entered(area) -> void:
+	print(area)

@@ -78,8 +78,9 @@ testAddInventory={
 [layer_names]
 
 2d_physics/layer_1="player"
-2d_physics/layer_2="AI"
-2d_physics/layer_3="world"
+2d_physics/layer_2="orb"
+2d_physics/layer_3="door"
+2d_physics/layer_4="world"
 
 [rendering]
 

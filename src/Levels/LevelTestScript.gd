@@ -1,9 +1,9 @@
 extends Node
 
-func _ready():
-	var scene = load("res://src/Actor/Player.tscn")
+"""var scene = load(res://src/Actor/Player.tscn)
 	var player = scene.instance()
 	add_child(player)
+	Adding a node child"""
 	
 func _input(event):
 	if(!globalVars.inventoryOpen):
@@ -17,9 +17,6 @@ func loadInventory():#Loads the inventory sreen
 	get_tree().change_scene("res://src/Levels/Inventory.tscn")
 	#var node = load("res://src/Level/Inventory.tscn").instance()
 	#get_node("/root/Level").add_child(node)
-
-func addToInventory():
-	print("N")
 
 func testAdd():
 	var rand = RandomNumberGenerator.new()

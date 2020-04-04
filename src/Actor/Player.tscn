@@ -11,10 +11,10 @@ extents = Vector2( 32, 32 )
 
 [node name="Player" type="KinematicBody2D"]
 scale = Vector2( 1.15, 1.06897 )
-collision_mask = 4
+collision_mask = 6
 script = ExtResource( 2 )
 
-[node name="playerIcon" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="."]
 rotation = 1.5708
 texture = ExtResource( 1 )
 
@@ -25,8 +25,8 @@ shape = SubResource( 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="ItemPickup" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemPickup"]
 shape = SubResource( 2 )
-[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="ItemPickup" to="." method="_on_ItemPickup_area_entered"]

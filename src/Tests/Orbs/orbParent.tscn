@@ -6,6 +6,8 @@
 radius = 24.0
 
 [node name="Orb" type="Area2D"]
+scale = Vector2( 0.960954, 1 )
+collision_layer = 2
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
