@@ -14,7 +14,7 @@ func get_color():
 func get_ID():
 	return(ID)
 
-func _on_Orb_body_entered(body):
+func _on_Orb_body_entered(body):#When player collides with orb
 	globalVars.inventoryNames.append(get_color())
 	globalVars.inventoryIDs.append(get_ID())
 	print(get_color())

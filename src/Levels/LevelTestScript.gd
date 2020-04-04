@@ -1,24 +1,26 @@
 extends Node
 
-"""var scene = load(res://src/Actor/Player.tscn)
-	var player = scene.instance()
-	add_child(player)
-	Adding a node child"""
+"""
+	How to add a a scene child to a scene:
+	var sceneToAdd = load(path)
+	var add = sceneToAdd.instance()
+	add_child(add)"""
 	
 func _input(event):#Level Input
-	if(event.is_action_pressed("exitGame")):
+	if(event.is_action_pressed("exitGame")):#Quitting game
 		get_tree().quit()
 	if(!globalVars.inventoryOpen):
-		if(event.is_action_pressed("takeOutEquipedItem")):
+		if(event.is_action_pressed("takeOutEquipedItem")):#Test adds
 			testAdd()
-		if(event.is_action_pressed("openInventory")):
+		if(event.is_action_pressed("openInventory")):#Open inventory
 			loadInventory()
 
 func loadInventory():#Loads the inventory sreen
 	globalVars.inventoryOpen=true
 	get_tree().change_scene("res://src/Levels/Inventory.tscn")
 
-func testAdd():#Test adding orb to level
+func testAdd():#Test adding random orb to level
+	#Only used to test inventory
 	var rand = RandomNumberGenerator.new()
 	rand.randomize()
 	var orbLinks=["Blue","Green","Orange","Purple","Red","Yellow"]

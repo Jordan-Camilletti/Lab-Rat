@@ -1,23 +1,19 @@
 extends Node2D
 
 func _ready():
-	print("\nNames")
-	for n in globalVars.inventoryNames:
-		print(n)
-	print("\nIDs")
-	for n in globalVars.inventoryIDs:
-		print("res://assets/"+globalVars.spriteDict.get(n))
+	var add=""
+	for n in range(len(globalVars.inventoryIDs)):
+		#Creating a new instance based off link from inventoryID and nodeDict, then adding it to inventory square
+		add=load("res://src/"+globalVars.nodeDict.get(globalVars.inventoryIDs[n])).instance()
+		add.position.x=(115*(n%9))+55
+		add.position.y=(120*(n/9))+55
+		add_child(add)
 
 func _input(event):#Inventory Input
-	if(event.is_action_pressed("exitGame")):
+	if(event.is_action_pressed("exitGame")):#Quit game
 		get_tree().quit()
-	if(event.is_action_pressed("openInventory")):
+	if(event.is_action_pressed("openInventory")):#Go back to level
 		closeInventory("res://src/Levels/LevelTest.tscn")
-	if(event.is_action_pressed("testAddInventory")):
-		print("test add")
-
-#func testAdd(item):#Test adding 'item' to inventory array
-#	globalVars.inventory.append(item)
 
 func closeInventory(level):#Closing back to level
 	globalVars.inventoryOpen=false
