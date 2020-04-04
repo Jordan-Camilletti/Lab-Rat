@@ -18,3 +18,4 @@ func _on_Orb_body_entered(body):
 	globalVars.inventoryNames.append(get_color())
 	globalVars.inventoryIDs.append(get_ID())
 	print(get_color())
+	queue_free()
