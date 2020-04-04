@@ -1,13 +1,12 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Levels/LevelTestScript.gd" type="Script" id=1]
 [ext_resource path="res://assets/grass.jpg" type="Texture" id=2]
 [ext_resource path="res://src/Actor/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/Tests/Orbs/orbBlue.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/Tests/Orbs/orbGreen.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/Tests/Orbs/orbOrange.tscn" type="PackedScene" id=6]
-[ext_resource path="res://src/Tests/Orbs/orbRed.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/Tests/Orbs/orbYellow.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Tests/Orbs/Blue/orbBlue.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Tests/Orbs/Orange/orbOrange.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Tests/Orbs/Green/orbGreen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Tests/Orbs/Purple/orbPurple.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 20, 0, 20, 24, 0, 24 )
@@ -53,30 +52,14 @@ tile_data = PoolIntArray( -1, 1, 0, -65536, 1, 0, -65535, 1, 0, -65534, 1, 0, -6
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 
-[node name="GreenOrb" parent="." instance=ExtResource( 5 )]
-position = Vector2( 247.84, 215.698 )
-scale = Vector2( 1, 1 )
-collision_layer = 1
+[node name="orbBlue" parent="." instance=ExtResource( 4 )]
+position = Vector2( 280, 198 )
 
-[node name="OrangeOrb" parent="." instance=ExtResource( 6 )]
-position = Vector2( 253.01, 496.139 )
-scale = Vector2( 1, 1 )
-collision_layer = 1
+[node name="orbGreen" parent="." instance=ExtResource( 6 )]
+position = Vector2( 785, 216 )
 
-[node name="BlueOrb" parent="." instance=ExtResource( 4 )]
-position = Vector2( 820.355, 516.817 )
-scale = Vector2( 1, 1 )
-collision_layer = 1
+[node name="orbOrange" parent="." instance=ExtResource( 5 )]
+position = Vector2( 279, 453 )
 
-[node name="RedOrb" parent="." instance=ExtResource( 7 )]
-position = Vector2( 846.202, 180.804 )
-scale = Vector2( 1, 1 )
-collision_layer = 1
-
-[node name="KinematicBody2D" parent="." instance=ExtResource( 8 )]
-position = Vector2( 531.627, 356.951 )
-[connection signal="body_entered" from="GreenOrb" to="GreenOrb" method="_on_Orb_body_entered"]
-[connection signal="body_entered" from="OrangeOrb" to="OrangeOrb" method="_on_Orb_body_entered"]
-[connection signal="body_entered" from="BlueOrb" to="BlueOrb" method="_on_Orb_body_entered"]
-[connection signal="body_entered" from="RedOrb" to="RedOrb" method="_on_Orb_body_entered"]
-[connection signal="body_entered" from="KinematicBody2D" to="KinematicBody2D" method="_on_Orb_body_entered"]
+[node name="KinematicBody2D" parent="." instance=ExtResource( 7 )]
+position = Vector2( 781, 475 )

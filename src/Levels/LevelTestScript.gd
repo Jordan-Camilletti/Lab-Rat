@@ -20,7 +20,8 @@ func testAdd():#Test adding orb to level
 	var rand = RandomNumberGenerator.new()
 	rand.randomize()
 	var orbLinks=["Blue","Green","Orange","Purple","Red","Yellow"]
-	var testOrb=load("res://src/Tests/Orbs/Orb"+orbLinks[rand.randi()%6]+".tscn").instance()
+	var orb=orbLinks[rand.randi()%6]
+	var testOrb=load("res://src/Tests/Orbs/"+orb+"/orb"+orb+".tscn").instance()
 	testOrb.position.x=30
 	testOrb.position.y=30
 	add_child(testOrb)

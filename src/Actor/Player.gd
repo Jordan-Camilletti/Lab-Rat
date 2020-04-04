@@ -17,7 +17,6 @@ func _physics_process(delta):
 	if(!globalVars.inventoryOpen):
 		look_at(get_global_mouse_position())#Looking at mouse
 		#self.move_and_collide(velocity*delta)
-		#print(collision)
 		velocity += getAcceleration(velocity)#Changing velocity based on input
 		velocity = move_and_slide(velocity)
 
@@ -35,9 +34,3 @@ func getAcceleration(vel:Vector2) -> Vector2:#Getting how fast player should mov
 	for n in range(0,2):
 		rtn[n]-=(vel[n]*slowdownConstant)#Slowing down to cap the speed
 	return(rtn)
-	
-func _on_RedOrbPickup_area_entered(area) -> void:
-	print("Red")
-
-func _on_BlueOrbPickup_body_entered(body):
-	print("Blue")

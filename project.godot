@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Actor",
 "language": "GDScript",
 "path": "res://src/Actor/Actor.gd"
+}, {
+"base": "Area2D",
+"class": "orbParent",
+"language": "GDScript",
+"path": "res://src/Tests/Orbs/orbParent.gd"
 } ]
 _global_script_class_icons={
-"Actor": ""
+"Actor": "",
+"orbParent": ""
 }
 
 [application]
