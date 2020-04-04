@@ -15,19 +15,19 @@ var velocity: = Vector2.ZERO
 
 func _physics_process(delta):
 	if(!globalVars.inventoryOpen):
-		look_at(get_global_mouse_position())
-		self.move_and_collide(velocity*delta)
+		look_at(get_global_mouse_position())#Looking at mouse
+		#self.move_and_collide(velocity*delta)
 		#print(collision)
-		velocity += getAcceleration(velocity)
-		#velocity = move_and_slide(velocity)
+		velocity += getAcceleration(velocity)#Changing velocity based on input
+		velocity = move_and_slide(velocity)
 
-func getDirection() -> Vector2:
+func getDirection() -> Vector2:#Getting direction player should move
 	return(Vector2(
 		Input.get_action_strength("moveRight")-Input.get_action_strength("moveLeft"),
 		Input.get_action_strength("moveDown")-Input.get_action_strength("moveUp")
 	))
 
-func getAcceleration(vel:Vector2) -> Vector2:
+func getAcceleration(vel:Vector2) -> Vector2:#Getting how fast player should move
 	var rtn=getDirection()
 	rtn*=walkAcceleration#Initial directions
 	if(Input.get_action_strength("run")>0):
@@ -38,7 +38,6 @@ func getAcceleration(vel:Vector2) -> Vector2:
 	
 func _on_RedOrbPickup_area_entered(area) -> void:
 	print("Red")
-
 
 func _on_BlueOrbPickup_body_entered(body):
 	print("Blue")

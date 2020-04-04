@@ -5,7 +5,7 @@ extends Node
 	add_child(player)
 	Adding a node child"""
 	
-func _input(event):
+func _input(event):#Level Input
 	if(!globalVars.inventoryOpen):
 		if(event.is_action_pressed("takeOutEquipedItem")):
 			testAdd()
@@ -16,7 +16,7 @@ func loadInventory():#Loads the inventory sreen
 	globalVars.inventoryOpen=true
 	get_tree().change_scene("res://src/Levels/Inventory.tscn")
 
-func testAdd():
+func testAdd():#Test adding orb to level
 	var rand = RandomNumberGenerator.new()
 	rand.randomize()
 	var orbLinks=["Blue","Green","Orange","Purple","Red","Yellow"]
