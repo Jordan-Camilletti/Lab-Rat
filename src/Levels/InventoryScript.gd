@@ -25,3 +25,10 @@ func _input(event):#Inventory Input
 func closeInventory(level):#Closing back to level
 	globalVars.inventoryOpen=false
 	get_tree().change_scene(level)
+
+
+func _on_testHighlight_mouse_entered():
+	print("Area entered")
+
+func _on_testHighlight_mouse_exited():
+	print("Area exited")
