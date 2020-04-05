@@ -6,6 +6,7 @@
 radius = 24.0
 
 [node name="Orb" type="Area2D"]
+position = Vector2( 0, -19 )
 scale = Vector2( 0.960954, 1 )
 collision_layer = 2
 script = ExtResource( 1 )

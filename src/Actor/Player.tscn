@@ -18,15 +18,15 @@ script = ExtResource( 2 )
 rotation = 1.5708
 texture = ExtResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Hitbox" type="CollisionShape2D" parent="."]
 rotation = 1.5708
 shape = SubResource( 1 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera" type="Camera2D" parent="."]
 current = true
 
 [node name="OrbPickup" type="Area2D" parent="."]
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="OrbPickup"]
+[node name="OrbPickupBox" type="CollisionShape2D" parent="OrbPickup"]
 shape = SubResource( 2 )
