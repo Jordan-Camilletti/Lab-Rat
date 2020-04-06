@@ -61,5 +61,5 @@ position = Vector2( 785, 216 )
 [node name="orbOrange" parent="." instance=ExtResource( 5 )]
 position = Vector2( 279, 453 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 7 )]
-position = Vector2( 781, 475 )
+[node name="orbPurple" parent="." instance=ExtResource( 7 )]
+position = Vector2( 787, 489 )

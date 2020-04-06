@@ -17,7 +17,7 @@ func _input(event):#Level Input
 
 func loadInventory():#Loads the inventory sreen
 	globalVars.inventoryOpen=true
-	get_tree().change_scene("res://src/Levels/Inventory.tscn")
+	get_tree().change_scene("res://src/Levels/Inventory/Inventory.tscn")
 
 func testAdd():#Test adding random orb to level
 	#Only used to test inventory
