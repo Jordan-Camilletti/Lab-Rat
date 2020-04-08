@@ -6,6 +6,9 @@ extends Node
 	var add = sceneToAdd.instance()
 	add_child(add)"""
 	
+func _ready():
+	OS.window_fullscreen=true
+	
 func _input(event):#Level Input
 	if(event.is_action_pressed("exitGame")):#Quitting game
 		get_tree().quit()
