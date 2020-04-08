@@ -12,4 +12,5 @@ position = Vector2( 513.997, 390.8 )
 texture = ExtResource( 2 )
 
 [node name="Space" parent="." instance=ExtResource( 3 )]
-position = Vector2( 62.8855, 60.1129 )
+position = Vector2( 61.9684, 61.063 )
+scale = Vector2( 1.39256, 1.49025 )
