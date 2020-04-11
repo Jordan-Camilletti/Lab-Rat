@@ -8,21 +8,17 @@
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 513.997, 390.8 )
+position = Vector2( 512, 384 )
 texture = ExtResource( 2 )
 
 [node name="Space" parent="." instance=ExtResource( 3 )]
-position = Vector2( 61.9684, 61.063 )
-scale = Vector2( 1.4, 1.5 )
+position = Vector2( 59.4884, 54.2462 )
 
 [node name="Space2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 173.039, 59.9814 )
-scale = Vector2( 1.4, 1.5 )
+position = Vector2( 170.859, 54.8318 )
 
 [node name="Space3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 286.948, 60.9483 )
-scale = Vector2( 1.4, 1.5 )
+position = Vector2( 284.905, 54.4078 )
 
 [node name="Space4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 173.898, 164.498 )
-scale = Vector2( 1.4, 1.5 )
+position = Vector2( 398.16, 53.4758 )
