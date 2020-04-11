@@ -7,7 +7,7 @@ extends Node
 	add_child(add)"""
 	
 func _ready():
-	OS.window_fullscreen=true
+	pass
 	
 func _input(event):#Level Input
 	if(event.is_action_pressed("exitGame")):#Quitting game

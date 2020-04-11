@@ -34,6 +34,11 @@ config/icon="res://assets/icon.png"
 
 globalVars="*res://src/globalVars.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
 [input]
 
 moveLeft={
