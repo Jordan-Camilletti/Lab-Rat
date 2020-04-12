@@ -2,8 +2,6 @@ extends Node2D
 
 """
 TODO:
-	Highlight currently selected square
-	Have math be based on screen size instead of hard-coded
 	Have way to move items to player
 """
 
@@ -44,6 +42,3 @@ func closeInventory(level):#Closing back to level
 func roundDown(num):#Rounds down num to the nearest whole number
 	var rtn=str(num).split(".")
 	return(int(rtn[0]))
-
-func _on_Space_mouse_entered():
-	pass # Replace with function body.
