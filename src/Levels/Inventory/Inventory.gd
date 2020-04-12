@@ -25,15 +25,17 @@ func _input(event):#Inventory Input
 		var mousePos=get_global_mouse_position()
 		var square=getInventorySquare(mousePos.x,mousePos.y)
 		if(square>=0 and square<len(globalVars.inventoryIDs)):
-			var currID=globalVars.inventoryNames[getInventorySquare(mousePos.x,mousePos.y)]
+			var currID=globalVars.inventoryNames[square]
 			print(currID)
 		else:
 			print("Outside or empty")
 		
 func getInventorySquare(xPos,yPos):
 	var xSquare=roundDown(xPos/256)-1
-	var ySquare=roundDown(yPos/200)*3
-	return(((xSquare+2)/(xSquare+2))*(xSquare+ySquare))
+	var ySquare=roundDown(yPos/200)
+	if(xSquare<0 or xSquare>=3 or ySquare<0 or ySquare>=3):
+		return(-1)
+	return(xSquare+(ySquare*3))
 
 func closeInventory(level):#Closing back to level
 	globalVars.inventoryOpen=false
