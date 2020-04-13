@@ -42,3 +42,6 @@ func closeInventory(level):#Closing back to level
 func roundDown(num):#Rounds down num to the nearest whole number
 	var rtn=str(num).split(".")
 	return(int(rtn[0]))
+
+func moveItem():
+	pass
