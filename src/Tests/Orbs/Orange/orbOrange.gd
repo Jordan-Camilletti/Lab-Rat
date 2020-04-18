@@ -2,4 +2,4 @@ extends orbParent
 
 func _ready():
 	color="Orange"
-	ID=2
+	ID=3

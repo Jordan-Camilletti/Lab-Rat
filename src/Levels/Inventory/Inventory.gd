@@ -29,6 +29,8 @@ func _input(event):#Inventory Input
 			print("Outside or empty")
 		
 func getInventorySquare(xPos,yPos):
+	if(xPos>(128-(145/2)) and xPos<=(128+(145/2)) and yPos>(300-(188/2)) and yPos<=(300+(188/2))):
+		return(-2)
 	var xSquare=roundDown(xPos/256)-1
 	var ySquare=roundDown(yPos/200)
 	if(xSquare<0 or xSquare>=3 or ySquare<0 or ySquare>=3):
