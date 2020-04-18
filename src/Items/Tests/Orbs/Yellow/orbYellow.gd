@@ -1,5 +1,5 @@
 extends orbParent
 
 func _ready():
-	color="Purple"
-	ID=4
+	itemName="Yellow"
+	itemID=6
