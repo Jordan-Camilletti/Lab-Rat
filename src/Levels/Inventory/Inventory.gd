@@ -47,5 +47,6 @@ func roundDown(num):#Rounds down num to the nearest whole number
 	var rtn=str(num).split(".")
 	return(int(rtn[0]))
 
+#TODO: work on this
 func moveItem(itemID, itemName):
 	pass
