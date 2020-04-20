@@ -1,13 +1,7 @@
 extends Node2D
 
 func _ready():
-	var add=""
-	for n in range(len(globalVars.inventoryIDs)):
-		#Creating a new instance based off link from inventoryID and nodeDict, then adding it to inventory square
-		add=load("res://src/"+globalVars.nodeDict.get(globalVars.inventoryIDs[n])).instance()
-		add.position.x=(256*(n%3))+384
-		add.position.y=(200*(n/3))+100
-		add_child(add)
+	refreshInventory()
 
 func _input(event):#Inventory Input
 	if(event.is_action_pressed("exitGame")):#Quit game
@@ -22,7 +16,7 @@ func _input(event):#Inventory Input
 			var newID=globalVars.inventoryIDs[square]
 			globalVars.setHeld(newName,newID)
 			globalVars.removeItem(square)
-			
+			refreshInventory()
 		
 func getInventorySquare(xPos,yPos):
 	if(xPos>(128-(145/2)) and xPos<=(128+(145/2)) and yPos>(300-(188/2)) and yPos<=(300+(188/2))):
@@ -32,6 +26,25 @@ func getInventorySquare(xPos,yPos):
 	if(xSquare<0 or xSquare>=3 or ySquare<0 or ySquare>=3):
 		return(-1)
 	return(xSquare+(ySquare*3))
+	
+func clearInventoryItems():
+	print(self.get_child_count())
+	var node
+	while(self.get_child_count()>11):
+		node=self.get_children()[11]
+		self.remove_child(node)
+		node.queue_free()
+	
+func refreshInventory():
+	clearInventoryItems()#Clearing old items
+	
+	var add=""#Adding back new inventory
+	for n in range(len(globalVars.inventoryIDs)):
+		#Creating a new instance based off link from inventoryID and nodeDict, then adding it to inventory square
+		add=load("res://src/"+globalVars.nodeDict.get(globalVars.inventoryIDs[n])).instance()
+		add.position.x=(256*(n%3))+384
+		add.position.y=(200*(n/3))+100
+		add_child(add)
 
 func closeInventory(level):#Closing back to level
 	globalVars.inventoryOpen=false

@@ -30,4 +30,3 @@ func removeItem(spot):#Removes the item at 'spot'
 			tempIDs.append(inventoryIDs[n])
 	inventoryNames=tempNames
 	inventoryIDs=tempIDs
-	print(inventoryNames)
