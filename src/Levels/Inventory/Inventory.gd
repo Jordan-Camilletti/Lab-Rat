@@ -28,7 +28,6 @@ func getInventorySquare(xPos,yPos):
 	return(xSquare+(ySquare*3))
 	
 func clearInventoryItems():
-	print(self.get_child_count())
 	var node
 	while(self.get_child_count()>11):
 		node=self.get_children()[11]
@@ -36,14 +35,23 @@ func clearInventoryItems():
 		node.queue_free()
 	
 func refreshInventory():
-	clearInventoryItems()#Clearing old items
+	#Clearing old items
+	clearInventoryItems()
 	
-	var add=""#Adding back new inventory
+	#Adding back new inventory
+	var add=""
 	for n in range(len(globalVars.inventoryIDs)):
 		#Creating a new instance based off link from inventoryID and nodeDict, then adding it to inventory square
-		add=load("res://src/"+globalVars.nodeDict.get(globalVars.inventoryIDs[n])).instance()
+		add=load(globalVars.getPath(globalVars.inventoryIDs[n])).instance()
 		add.position.x=(256*(n%3))+384
 		add.position.y=(200*(n/3))+100
+		add_child(add)
+	
+	#Adding held object
+	if(globalVars.heldID!=0):
+		add=load(globalVars.getPath(globalVars.heldID)).instance()
+		add.position.x=(128)
+		add.position.y=(300)
 		add_child(add)
 
 func closeInventory(level):#Closing back to level

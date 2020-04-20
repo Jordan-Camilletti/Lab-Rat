@@ -17,6 +17,9 @@ var nodeDict: = {#Matches ID numbers to nodes
 	6:"Items/Tests/Orbs/Yellow/orbYellow.tscn",#Yellow Orb
 }
 
+func getPath(id):#Returns the scene path based on given 'id'
+	return("res://src/"+nodeDict.get(id))
+
 func setHeld(n,id):#Changes the currently held item
 	heldName=n
 	heldID=id
