@@ -12,6 +12,15 @@ var runMultiplier: = 1.5#How much faster running is compared to walking
 var slowdownConstant: = 0.4#The 'friction' constant
 var velocity: = Vector2.ZERO
 
+"""
+TODO:
+Fix bug of add_child() adding node to Inventory instead of Player	
+"""
+func _ready():
+	var path=load("res://src/Items/Tests/Orbs/Green/orbGreen.tscn")
+	var add=path.instance()
+	add_child(add)
+
 func _physics_process(delta):
 	if(!globalVars.inventoryOpen):
 		look_at(get_global_mouse_position())#Looking at mouse
