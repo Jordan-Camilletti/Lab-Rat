@@ -21,5 +21,13 @@ func setHeld(n,id):#Changes the currently held item
 	heldName=n
 	heldID=id
 
-func removeItem(spot):#Removes item at 'spot'
-	pass
+func removeItem(spot):#Removes the item at 'spot'
+	var tempNames: = []
+	var tempIDs: = []
+	for n in range(len(inventoryNames)):
+		if(n!=spot):
+			tempNames.append(inventoryNames[n])
+			tempIDs.append(inventoryIDs[n])
+	inventoryNames=tempNames
+	inventoryIDs=tempIDs
+	print(inventoryNames)

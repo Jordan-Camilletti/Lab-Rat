@@ -1,10 +1,5 @@
 extends Node2D
 
-"""
-TODO:
-	Have way to move items to player
-"""
-
 func _ready():
 	var add=""
 	for n in range(len(globalVars.inventoryIDs)):
@@ -25,10 +20,9 @@ func _input(event):#Inventory Input
 		if(square>=0 and square<len(globalVars.inventoryIDs)):
 			var newName=globalVars.inventoryNames[square]
 			var newID=globalVars.inventoryIDs[square]
-			globalVars.removeItem(square)
 			globalVars.setHeld(newName,newID)
-		else:
-			print("Outside or empty")
+			globalVars.removeItem(square)
+			
 		
 func getInventorySquare(xPos,yPos):
 	if(xPos>(128-(145/2)) and xPos<=(128+(145/2)) and yPos>(300-(188/2)) and yPos<=(300+(188/2))):

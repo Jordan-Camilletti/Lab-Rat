@@ -15,12 +15,18 @@ _global_script_classes=[ {
 "path": "res://src/Actors/Actor.gd"
 }, {
 "base": "Area2D",
+"class": "Item",
+"language": "GDScript",
+"path": "res://src/Items/Item.gd"
+}, {
+"base": "Item",
 "class": "orbParent",
 "language": "GDScript",
 "path": "res://src/Items/Tests/Orbs/orbParent.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",
+"Item": "",
 "orbParent": ""
 }
 

@@ -1,7 +1,7 @@
 extends Actor
 
 """
-MAIN TODO:
+MAIN TODOs:
 	Create & test doors 
 	Create & test end goals
 	Create & test multiple levels
