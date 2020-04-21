@@ -17,9 +17,11 @@ TODO:
 Fix bug of add_child() adding node to Inventory instead of Player	
 """
 func _ready():
-	var path=load("res://src/Items/Tests/Orbs/Green/orbGreen.tscn")
-	var add=path.instance()
-	add_child(add)
+	if(globalVars.heldID!=0):
+		var path=load(globalVars.getPath(globalVars.heldID))
+		var add=path.instance()
+		add.position.x=30
+		add_child(add)
 
 func _physics_process(delta):
 	if(!globalVars.inventoryOpen):

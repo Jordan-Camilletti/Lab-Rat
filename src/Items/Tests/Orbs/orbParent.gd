@@ -5,7 +5,7 @@ func _ready():
 	pass
 
 func _on_Orb_body_entered(body):#When player collides with orb
-	globalVars.inventoryNames.append(get_name())
-	globalVars.inventoryIDs.append(get_ID())
-	#print(get_name())
-	queue_free()
+	if(self.get_parent().get_name()!="Player"):#Player can't pick up their held item
+		globalVars.inventoryNames.append(get_name())
+		globalVars.inventoryIDs.append(get_ID())
+		queue_free()

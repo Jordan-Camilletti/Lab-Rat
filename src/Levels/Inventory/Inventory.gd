@@ -39,7 +39,7 @@ func refreshInventory():
 	clearInventoryItems()
 	
 	#Adding back new inventory
-	var add=""
+	var add
 	for n in range(len(globalVars.inventoryIDs)):
 		#Creating a new instance based off link from inventoryID and nodeDict, then adding it to inventory square
 		add=load(globalVars.getPath(globalVars.inventoryIDs[n])).instance()
