@@ -1,9 +1,7 @@
 extends Actor
 
 """
-TODO:
-	Create inventory
-	Create item system
+MAIN TODOs:
 	Create & test doors 
 	Create & test end goals
 	Create & test multiple levels
@@ -14,19 +12,31 @@ var runMultiplier: = 1.5#How much faster running is compared to walking
 var slowdownConstant: = 0.4#The 'friction' constant
 var velocity: = Vector2.ZERO
 
+"""
+TODO:
+Fix bug of add_child() adding node to Inventory instead of Player	
+"""
+func _ready():
+	if(globalVars.heldID!=0):
+		var path=load(globalVars.getPath(globalVars.heldID))
+		var add=path.instance()
+		add.position.x=30
+		add_child(add)
+
 func _physics_process(delta):
 	if(!globalVars.inventoryOpen):
-		look_at(get_global_mouse_position())
-		velocity += getAcceleration(velocity)
+		look_at(get_global_mouse_position())#Looking at mouse
+		#self.move_and_collide(velocity*delta)
+		velocity += getAcceleration(velocity)#Changing velocity based on input
 		velocity = move_and_slide(velocity)
 
-func getDirection() -> Vector2:
+func getDirection() -> Vector2:#Getting direction player should move
 	return(Vector2(
 		Input.get_action_strength("moveRight")-Input.get_action_strength("moveLeft"),
 		Input.get_action_strength("moveDown")-Input.get_action_strength("moveUp")
 	))
 
-func getAcceleration(vel:Vector2) -> Vector2:
+func getAcceleration(vel:Vector2) -> Vector2:#Getting how fast player should move
 	var rtn=getDirection()
 	rtn*=walkAcceleration#Initial directions
 	if(Input.get_action_strength("run")>0):
