@@ -32,7 +32,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Aftershock"
+config/name="Lab Rat"
 run/main_scene="res://src/Levels/LevelTest.tscn"
 config/icon="res://assets/icon.png"
 
