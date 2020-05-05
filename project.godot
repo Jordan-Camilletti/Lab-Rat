@@ -32,17 +32,13 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Lab Rat"
+config/name="Aftershock"
 run/main_scene="res://src/Levels/LevelTest.tscn"
 config/icon="res://assets/icon.png"
 
 [autoload]
 
 globalVars="*res://src/globalVars.gd"
-
-[display]
-
-window/stretch/mode="viewport"
 
 [input]
 
@@ -71,11 +67,6 @@ run={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777237,"unicode":0,"echo":false,"script":null)
  ]
 }
-takeOutEquipedItem={
-"deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":49,"unicode":0,"echo":false,"script":null)
- ]
-}
 openInventory={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"unicode":0,"echo":false,"script":null)
@@ -95,9 +86,8 @@ clickItem={
 [layer_names]
 
 2d_physics/layer_1="player"
-2d_physics/layer_2="orb"
-2d_physics/layer_3="door"
-2d_physics/layer_4="world"
+2d_physics/layer_2="AI"
+2d_physics/layer_3="world"
 
 [rendering]
 
