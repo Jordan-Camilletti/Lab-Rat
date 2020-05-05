@@ -12,10 +12,6 @@ var runMultiplier: = 1.5#How much faster running is compared to walking
 var slowdownConstant: = 0.4#The 'friction' constant
 var velocity: = Vector2.ZERO
 
-"""
-TODO:
-Fix bug of add_child() adding node to Inventory instead of Player	
-"""
 func _ready():
 	if(globalVars.heldID!=0):
 		var path=load(globalVars.getPath(globalVars.heldID))
