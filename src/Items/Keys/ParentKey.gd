@@ -1,16 +1,11 @@
-extends Area2D
+extends Item
+class_name ParentKey
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_Key_body_entered(body):
+	if(self.get_parent().get_name()!="Player"):#Player can't pick up their held item
+		globalVars.inventoryNames.append(get_name())
+		globalVars.inventoryIDs.append(get_ID())
+		queue_free()
