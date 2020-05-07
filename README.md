@@ -1,2 +1,2 @@
 # Lab Rat
-A game where opening your inventory resets the entire level
+A game about a time-traveling lab rat where opening your inventory resets the entire level
