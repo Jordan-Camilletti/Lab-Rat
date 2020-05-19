@@ -1,5 +1,5 @@
 extends ParentKey
 
 func _ready():
-	itemName="Blue key"
-	itemID=5
+	itemName="Red key"
+	itemID=1

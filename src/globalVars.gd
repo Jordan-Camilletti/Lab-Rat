@@ -9,12 +9,11 @@ var heldID: = 0
 var nodeDict: = {#Matches ID numbers to nodes
 	#All values here are to be added on to res://src/
 	0:"Empty",
-	1:"Items/Keys/Blue/KeyBlue.tscn",#Blue key
-	2:"Items/Tests/Orbs/Green/orbGreen.tscn",#Green Orb
-	3:"Items/Tests/Orbs/Orange/orbOrange.tscn",#Orange Orb
-	4:"Items/Tests/Orbs/Purple/orbPurple.tscn",#Purple Orb
-	5:"Items/Tests/Orbs/Red/orbRed.tscn",#Red Orb
-	6:"Items/Tests/Orbs/Yellow/orbYellow.tscn",#Yellow Orb
+	1:"Items/Keys/Red/KeyRed.tscn",#Red key
+	2:"Items/Keys/Orange/KeyOrange.tscn",#Orange key
+	3:"Items/Keys/Yellow/KeyYellow.tscn",#Yellow key
+	4:"Items/Keys/Green/KeyGreen.tscn",#Green key
+	5:"Items/Keys/Blue/KeyBlue.tscn",#Blue key
 }
 
 func getPath(id):#Returns the scene path based on given 'id'

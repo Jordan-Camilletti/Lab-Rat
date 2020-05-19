@@ -1,9 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/Levels/LevelTestScript.gd" type="Script" id=1]
 [ext_resource path="res://assets/grass.jpg" type="Texture" id=2]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Items/Keys/Green/KeyGreen.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Items/Keys/Blue/KeyBlue.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Items/Keys/Orange/KeyOrange.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Items/Keys/Red/KeyRed.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Items/Keys/Yellow/KeyYellow.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 20, 0, 20, 24, 0, 24 )
@@ -51,6 +55,16 @@ tile_data = PoolIntArray( -1, 1, 0, -65536, 1, 0, -65535, 1, 0, -65534, 1, 0, -6
 position = Vector2( 246, 196 )
 
 [node name="KeyBlue" parent="." instance=ExtResource( 5 )]
-position = Vector2( 502.089, 256.8 )
-collision_layer = 3
-collision_mask = 3
+position = Vector2( 218.999, 514.998 )
+
+[node name="KeyGreen" parent="." instance=ExtResource( 4 )]
+position = Vector2( 550.998, 512.998 )
+
+[node name="KeyOrange" parent="." instance=ExtResource( 6 )]
+position = Vector2( 819.997, 516.998 )
+
+[node name="KeyRed" parent="." instance=ExtResource( 7 )]
+position = Vector2( 366.998, 314.999 )
+
+[node name="KeyYellow" parent="." instance=ExtResource( 8 )]
+position = Vector2( 704.997, 330.999 )
