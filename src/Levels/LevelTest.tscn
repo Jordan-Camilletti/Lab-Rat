@@ -3,7 +3,7 @@
 [ext_resource path="res://src/Levels/LevelTestScript.gd" type="Script" id=1]
 [ext_resource path="res://assets/grass.jpg" type="Texture" id=2]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/Items/Tests/Orbs/Orange/orbOrange.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Items/Keys/Blue/KeyBlue.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 20, 0, 20, 24, 0, 24 )
@@ -50,5 +50,7 @@ tile_data = PoolIntArray( -1, 1, 0, -65536, 1, 0, -65535, 1, 0, -65534, 1, 0, -6
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 246, 196 )
 
-[node name="orbOrange" parent="." instance=ExtResource( 4 )]
-position = Vector2( 487, 303 )
+[node name="KeyBlue" parent="." instance=ExtResource( 5 )]
+position = Vector2( 502.089, 256.8 )
+collision_layer = 3
+collision_mask = 3

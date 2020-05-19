@@ -9,7 +9,7 @@ var heldID: = 0
 var nodeDict: = {#Matches ID numbers to nodes
 	#All values here are to be added on to res://src/
 	0:"Empty",
-	1:"Items/Tests/Orbs/Blue/orbBlue.tscn",#Blue orb
+	1:"Items/Keys/Blue/KeyBlue.tscn",#Blue key
 	2:"Items/Tests/Orbs/Green/orbGreen.tscn",#Green Orb
 	3:"Items/Tests/Orbs/Orange/orbOrange.tscn",#Orange Orb
 	4:"Items/Tests/Orbs/Purple/orbPurple.tscn",#Purple Orb

@@ -23,17 +23,11 @@ _global_script_classes=[ {
 "class": "ParentKey",
 "language": "GDScript",
 "path": "res://src/Items/Keys/ParentKey.gd"
-}, {
-"base": "Item",
-"class": "orbParent",
-"language": "GDScript",
-"path": "res://src/Items/Tests/Orbs/orbParent.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",
 "Item": "",
-"ParentKey": "",
-"orbParent": ""
+"ParentKey": ""
 }
 
 [application]
