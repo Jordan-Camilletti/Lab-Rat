@@ -58,7 +58,7 @@ position = Vector2( 246, 196 )
 position = Vector2( 218.999, 514.998 )
 
 [node name="KeyGreen" parent="." instance=ExtResource( 4 )]
-position = Vector2( 550.998, 512.998 )
+position = Vector2( 548.998, 449.998 )
 
 [node name="KeyOrange" parent="." instance=ExtResource( 6 )]
 position = Vector2( 819.997, 516.998 )
