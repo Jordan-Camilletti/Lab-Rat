@@ -19,7 +19,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Items/Item.gd"
 }, {
-"base": "Area2D",
+"base": "Item",
 "class": "ParentDoor",
 "language": "GDScript",
 "path": "res://src/Items/Doors/ParentDoor.gd"

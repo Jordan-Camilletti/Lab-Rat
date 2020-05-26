@@ -1,2 +1,5 @@
-extends Area2D
+extends Item
 class_name ParentDoor
+
+func _ready():
+	pass
