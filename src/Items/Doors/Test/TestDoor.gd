@@ -8,4 +8,11 @@ func _ready():
 
 func _input(event):
 	if(event.is_action_pressed("doorTest")):
-		setOpen(!getOpen())
+		#setOpen(!getOpen())
+		setSprite()
+
+func setSprite():#Swaping the door's state
+	if(open):#Set sprite to open
+		get_node(Sprite).set_texture=openSprite
+	else:#Set sprite to close
+		get_node(Sprite).set_texture=closedSprite
