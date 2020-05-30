@@ -17,6 +17,6 @@ func setOpen(o):#Changing state and sprite
 	
 func setSprite():#Swaping the door's state
 	if(open):#Set sprite to open
-		Sprite.set_texture=openSprite
+		$Sprite.texture=openSprite
 	else:#Set sprite to close
-		Sprite.set_texture=closedSprite
+		$Sprite.texture=closedSprite

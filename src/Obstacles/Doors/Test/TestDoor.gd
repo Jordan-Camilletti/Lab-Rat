@@ -12,9 +12,4 @@ func _input(event):
 		#setOpen(!getOpen())
 		open=!open
 		setSprite()
-
-func setSprite():#Swaping the door's state
-	if(open):#Set sprite to open
-		$Sprite.texture=openSprite
-	else:#Set sprite to close
-		$Sprite.texture=closedSprite
+		
