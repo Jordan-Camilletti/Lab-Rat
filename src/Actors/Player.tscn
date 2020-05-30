@@ -26,7 +26,7 @@ shape = SubResource( 1 )
 current = true
 
 [node name="OrbPickup" type="Area2D" parent="."]
-collision_mask = 2
+collision_mask = 10
 
 [node name="OrbPickupBox" type="CollisionShape2D" parent="OrbPickup"]
 shape = SubResource( 2 )

@@ -19,10 +19,15 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Items/Item.gd"
 }, {
-"base": "Item",
+"base": "KinematicBody2D",
+"class": "Obstacle",
+"language": "GDScript",
+"path": "res://src/Obstacles/Obstacle.gd"
+}, {
+"base": "Obstacle",
 "class": "ParentDoor",
 "language": "GDScript",
-"path": "res://src/Items/Doors/ParentDoor.gd"
+"path": "res://src/Obstacles/Doors/ParentDoor.gd"
 }, {
 "base": "Item",
 "class": "ParentKey",
@@ -32,6 +37,7 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "Actor": "",
 "Item": "",
+"Obstacle": "",
 "ParentDoor": "",
 "ParentKey": ""
 }
@@ -97,7 +103,7 @@ doorTest={
 [layer_names]
 
 2d_physics/layer_1="player"
-2d_physics/layer_2="AI"
+2d_physics/layer_2="world"
 2d_physics/layer_3="keys"
 2d_physics/layer_4="doors"
 

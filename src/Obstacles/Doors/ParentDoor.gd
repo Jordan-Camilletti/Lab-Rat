@@ -1,4 +1,4 @@
-extends Item
+extends Obstacle
 class_name ParentDoor
 
 var open=false#State of the door
