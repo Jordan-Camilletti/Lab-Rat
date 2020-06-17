@@ -7,9 +7,3 @@ func _ready():
 	itemName="testDoor"
 	itemID=6
 	setSprite()
-
-func _input(event):
-	pass
-	if(event.is_action_pressed("doorTest") and !open):
-		setOpen(!getOpen())
-		$Hitbox.queue_free()

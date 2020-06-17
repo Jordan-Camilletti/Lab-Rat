@@ -23,7 +23,16 @@ func setSprite():#Swaping the door's state
 		$Sprite.texture=closedSprite
 
 func _on_Detection_body_entered(body):
-	print("OwO")
-	if(true):#Only player can unlock door
+	if(!open):
 		setOpen(!getOpen())
-		$Hitbox.queue_free()
+		$Hitbox.set_deferred("disabled", true)
+		#get_node("Hitbox").disabled=true
+		#$Hitbox.queue_free()
+		print("OwO")
+
+
+func _on_Detection_body_exited(body):
+	if(open):
+		setOpen(!getOpen())
+		$Hitbox.set_deferred("disabled", false)
+		print("UwU")
