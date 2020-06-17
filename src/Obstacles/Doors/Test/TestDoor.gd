@@ -12,4 +12,5 @@ func _input(event):
 		#setOpen(!getOpen())
 		open=!open
 		setSprite()
+		$Hitbox.queue_free()
 		
