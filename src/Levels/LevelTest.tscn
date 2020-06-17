@@ -75,6 +75,7 @@ position = Vector2( 819.997, 516.998 )
 
 [node name="KeyRed" parent="." instance=ExtResource( 7 )]
 position = Vector2( 366.998, 314.999 )
+scale = Vector2( 1.44824, 0.907692 )
 
 [node name="KeyYellow" parent="." instance=ExtResource( 8 )]
 position = Vector2( 704.997, 330.999 )
