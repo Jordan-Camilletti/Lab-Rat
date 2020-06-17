@@ -10,7 +10,6 @@
 [ext_resource path="res://src/Items/Keys/Yellow/KeyYellow.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Obstacles/Doors/Test/TestDoor.tscn" type="PackedScene" id=9]
 
-
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 20, 0, 20, 24, 0, 24 )
 
