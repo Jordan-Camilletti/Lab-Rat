@@ -17,4 +17,3 @@ texture = ExtResource( 3 )
 
 [node name="Hitbox" parent="." index="1"]
 shape = SubResource( 1 )
-[connection signal="body_entered" from="." to="." method="_on_Key_body_entered"]
