@@ -2,7 +2,7 @@ extends Actor
 
 """
 MAIN TODOs:
-	Create & test doors 
+	Create different door colors
 	Create & test end goals
 	Create & test multiple levels
 	Create animations
