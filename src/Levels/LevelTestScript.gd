@@ -4,7 +4,8 @@ extends Node
 	How to add a a scene child to a scene:
 	var sceneToAdd = load(path)
 	var add = sceneToAdd.instance()
-	add_child(add)"""
+	add_child(add)
+"""
 	
 func _ready():
 	pass
