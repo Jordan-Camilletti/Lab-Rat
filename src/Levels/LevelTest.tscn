@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/Levels/LevelTestScript.gd" type="Script" id=1]
 [ext_resource path="res://assets/grass.jpg" type="Texture" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://src/Items/Keys/Red/KeyRed.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Items/Keys/Yellow/KeyYellow.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Obstacles/Doors/Test/TestDoor.tscn" type="PackedScene" id=9]
-[ext_resource path="res://src/Items/Cheese/ParentCheese.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 20, 0, 20, 24, 0, 24 )
@@ -83,9 +82,6 @@ position = Vector2( 704.997, 330.999 )
 [node name="Door" parent="." instance=ExtResource( 9 )]
 position = Vector2( 540.64, 147 )
 collision_mask = 15
-
-[node name="Area2D" parent="." instance=ExtResource( 10 )]
-position = Vector2( 127.053, 403.737 )
 [connection signal="body_entered" from="KeyBlue" to="KeyBlue" method="_on_Key_body_entered"]
 [connection signal="body_entered" from="KeyGreen" to="KeyGreen" method="_on_Key_body_entered"]
 [connection signal="body_entered" from="KeyOrange" to="KeyOrange" method="_on_Key_body_entered"]

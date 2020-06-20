@@ -22,14 +22,14 @@ func setSprite():#Swaping the door's state
 	else:#Set sprite to close
 		$Sprite.texture=closedSprite
 
-func _on_Detection_body_entered(body):
+func _on_Detection_body_entered(_body):
 	if(!open and globalVars.heldID==key):
 		setOpen(!getOpen())
 		$Hitbox.set_deferred("disabled", true)
 		#get_node("Hitbox").disablwdwqeqeqe12132e
 		#$Hitbox.queue_free()
 
-func _on_Detection_body_exited(body):
+func _on_Detection_body_exited(_body):
 	if(open):
 		setOpen(!getOpen())
 		$Hitbox.set_deferred("disabled", false)
