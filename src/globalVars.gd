@@ -18,7 +18,12 @@ var nodeDict: = {#Matches ID numbers to nodes
 	104:"Items/Keys/Blue/KeyBlue.tscn",#Blue key
 	
 	#200-299: Doors
-	200:"Items/Doors/Test/TestDoor.tscn"#Test door(TESTING ONLY)
+	#200:"Items/Doors/Test/TestDoor.tscn"#Test door(TESTING ONLY)
+	200:"",#Red door
+	201:"",#Orange door
+	202:"",#Yellow door
+	203:"",#Green door
+	204:""#Blue door
 
 	#300-399: Cheese
 }

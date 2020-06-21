@@ -23,10 +23,6 @@ points = PoolVector2Array( 0, 0, 20, 0, 20, 24, 0, 24 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
 1/name = "grass.jpg 1"
@@ -37,11 +33,6 @@ points = PoolVector2Array( 0, 0, 20, 0, 20, 24, 0, 24 )
 1/tile_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 1 )
-1/shape_one_way = false
-1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -84,8 +75,8 @@ position = Vector2( 704.997, 330.999 )
 position = Vector2( 540.64, 147 )
 collision_mask = 15
 
-[node name="Item" parent="." instance=ExtResource( 10 )]
-position = Vector2( 211.263, 404.79 )
+[node name="Cheese" parent="." instance=ExtResource( 10 )]
+position = Vector2( 196.501, 356.165 )
 [connection signal="body_entered" from="KeyBlue" to="KeyBlue" method="_on_Key_body_entered"]
 [connection signal="body_entered" from="KeyGreen" to="KeyGreen" method="_on_Key_body_entered"]
 [connection signal="body_entered" from="KeyOrange" to="KeyOrange" method="_on_Key_body_entered"]
