@@ -2,4 +2,4 @@ extends ParentKey
 
 func _ready():
 	itemName="Blue key"
-	itemID=5
+	itemID=104

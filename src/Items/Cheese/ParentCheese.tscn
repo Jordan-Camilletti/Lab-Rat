@@ -1,5 +1,19 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/Items/Item.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Cheese/TestCheese.png" type="Texture" id=2]
+[ext_resource path="res://src/Items/Cheese/ParentCheese.gd" type="Script" id=3]
 
-[node name="Item" instance=ExtResource( 1 )]
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 40, 40 )
+
+[node name="Cheese" instance=ExtResource( 1 )]
+collision_layer = 8
+collision_mask = 1
+script = ExtResource( 3 )
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 2 )
+
+[node name="Hitbox" parent="." index="1"]
+shape = SubResource( 1 )

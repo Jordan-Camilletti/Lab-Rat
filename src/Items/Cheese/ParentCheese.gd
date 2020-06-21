@@ -4,5 +4,6 @@ class_name ParentCheese
 func _ready():
 	pass
 	
-func on_item_collision(body):#When player collides with cheese
+#Player beat level
+func _on_Item_body_entered(_body):#When player collides with cheese
 	print("Cheems")
