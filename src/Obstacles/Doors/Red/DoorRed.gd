@@ -3,7 +3,7 @@ extends ParentDoor
 func _ready():
 	key=100#Red key
 	openSprite=load("res://assets/Doors/Test/open.png")
-	closedSprite=load("res://assets/Doors/Test/closed.png")
-	itemName="testDoor"
+	closedSprite=load("res://assets/Doors/Red/closed.png")
+	itemName="DoorRed"
 	itemID=200
 	setSprite()

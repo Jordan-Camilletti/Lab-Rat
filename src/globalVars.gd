@@ -19,11 +19,11 @@ var nodeDict: = {#Matches ID numbers to nodes
 	
 	#200-299: Doors
 	#200:"Items/Doors/Test/TestDoor.tscn"#Test door(TESTING ONLY)
-	200:"",#Red door
-	201:"",#Orange door
-	202:"",#Yellow door
-	203:"",#Green door
-	204:""#Blue door
+	200:"res://src/Obstacles/Doors/Red/DoorRed.tscn",#Red door
+	201:"res://src/Obstacles/Doors/Orange/DoorOrange.tscn",#Orange door
+	202:"res://src/Obstacles/Doors/Yellow/DoorYellow.tscn",#Yellow door
+	203:"res://src/Obstacles/Doors/Green/DoorGreen.tscn",#Green door
+	204:"res://src/Obstacles/Doors/Blue/DoorBlue.tscn"#Blue door
 
 	#300-399: Cheese
 }
