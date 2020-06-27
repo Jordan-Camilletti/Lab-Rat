@@ -5,6 +5,8 @@ extends Node
 	var sceneToAdd = load(path)
 	var add = sceneToAdd.instance()
 	add_child(add)
+	
+	Level squares are 96 units wide(48 unit radius)
 """
 	
 func _ready():
