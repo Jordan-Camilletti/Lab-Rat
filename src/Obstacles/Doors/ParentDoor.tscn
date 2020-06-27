@@ -24,7 +24,7 @@ one_way_collision_margin = 0.0
 
 [node name="Detection" type="Area2D" parent="."]
 collision_layer = 8
-collision_mask = 5
+collision_mask = 19
 
 [node name="Front" type="CollisionShape2D" parent="Detection"]
 position = Vector2( 0, 42 )

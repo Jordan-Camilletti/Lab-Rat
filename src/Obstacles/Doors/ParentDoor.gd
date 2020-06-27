@@ -23,6 +23,7 @@ func setSprite():#Swaping the door's state
 		$Sprite.texture=closedSprite
 
 func _on_Detection_body_entered(_body):
+	print("A")
 	if(!open and globalVars.heldID==key):
 		setOpen(!getOpen())
 		$Hitbox.set_deferred("disabled", true)
@@ -30,6 +31,7 @@ func _on_Detection_body_entered(_body):
 		#$Hitbox.queue_free()
 
 func _on_Detection_body_exited(_body):
+	print("B")
 	if(open):
 		setOpen(!getOpen())
 		$Hitbox.set_deferred("disabled", false)
