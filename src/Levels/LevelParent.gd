@@ -19,8 +19,11 @@ func _ready():
 	
 func _input(event):#Level Input
 	if(globalVars.levelChangeFlag):#Change to next level
+		print("Swap")
 		globalVars.setLevelChangeFlag(false)
 		get_tree().change_scene(globalVars.getIDPath(nextLevelID))
+		#get_tree().change_scene("res://src/Levels/Level 2/Level 2.tscn")
+		print(itemName)
 	if(event.is_action_pressed("exitGame")):#Quitting game
 		get_tree().quit()
 	if(!globalVars.inventoryOpen):

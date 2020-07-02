@@ -1,6 +1,6 @@
 extends Node
 
-var currLevel: = 001#Level the player is currently off
+var currLevel: = 001#Level the player is currently on
 var levelChangeFlag: = false#Flag for changing the level
 
 var inventoryOpen: = false#Flag for if the inventory is open
