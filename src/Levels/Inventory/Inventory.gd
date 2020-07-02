@@ -7,7 +7,7 @@ func _input(event):#Inventory Input
 	if(event.is_action_pressed("exitGame")):#Quit game
 		get_tree().quit()
 	if(event.is_action_pressed("openInventory")):#Go back to level
-		closeInventory(globalVars.getPath(globalVars.currLevel))
+		closeInventory(globalVars.getIDPath(globalVars.currLevel))
 	if(event.is_action_pressed("clickItem")):
 		var mousePos=get_global_mouse_position()
 		var square=getInventorySquare(mousePos.x,mousePos.y)
@@ -42,14 +42,14 @@ func refreshInventory():
 	var add
 	for n in range(len(globalVars.inventoryIDs)):
 		#Creating a new instance based off link from inventoryID and nodeDict, then adding it to inventory square
-		add=load(globalVars.getPath(globalVars.inventoryIDs[n])).instance()
+		add=load(globalVars.getIDPath(globalVars.inventoryIDs[n])).instance()
 		add.position.x=(256*(n%3))+384
 		add.position.y=(200*(n/3))+100
 		add_child(add)
 	
 	#Adding held object
 	if(globalVars.heldID!=0):
-		add=load(globalVars.getPath(globalVars.heldID)).instance()
+		add=load(globalVars.getIDPath(globalVars.heldID)).instance()
 		add.position.x=(128)
 		add.position.y=(300)
 		add_child(add)

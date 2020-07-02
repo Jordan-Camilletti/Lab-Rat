@@ -14,7 +14,7 @@ var velocity: = Vector2.ZERO
 
 func _ready():
 	if(globalVars.heldID!=0):
-		var path=load(globalVars.getPath(globalVars.heldID))
+		var path=load(globalVars.getIDPath(globalVars.heldID))
 		var add=path.instance()
 		add.position.x=30
 		add_child(add)

@@ -1,10 +1,13 @@
 extends Node
 
-var currLevel: = 002
-var inventoryOpen: = false
-var inventoryNames: = []
+var currLevel: = 001#Level the player is currently off
+var levelChangeFlag: = false#Flag for changing the level
+
+var inventoryOpen: = false#Flag for if the inventory is open
+var inventoryNames: = []#Inventory items
 var inventoryIDs: = []
-var heldName: = "Empty"
+
+var heldName: = "Empty"#Obejct the player has equipped
 var heldID: = 000
 
 var nodeDict: = {#Matches ID numbers to nodes
@@ -12,8 +15,8 @@ var nodeDict: = {#Matches ID numbers to nodes
 	000:"Empty",
 	
 	#001-099: Levels
-	001:"Levels/Inventory/Inventory.tscn",#Inventory
-	002:"Levels/LevelParent.tscn",#Parent level
+	001:"Levels/Level 1/Level1.tscn",#Level 1
+	002:"Levels/Level 2/Level2.tscn",
 	
 	#100-199: Keys
 	100:"Items/Keys/Red/KeyRed.tscn",#Red key
@@ -24,18 +27,22 @@ var nodeDict: = {#Matches ID numbers to nodes
 	
 	#200-299: Doors
 	#200:"Items/Doors/Test/TestDoor.tscn"#Test door(TESTING ONLY)
-	200:"res://src/Obstacles/Doors/Red/DoorRed.tscn",#Red door
-	201:"res://src/Obstacles/Doors/Orange/DoorOrange.tscn",#Orange door
-	202:"res://src/Obstacles/Doors/Yellow/DoorYellow.tscn",#Yellow door
-	203:"res://src/Obstacles/Doors/Green/DoorGreen.tscn",#Green door
-	204:"res://src/Obstacles/Doors/Blue/DoorBlue.tscn"#Blue door
+	200:"Obstacles/Doors/Red/DoorRed.tscn",#Red door
+	201:"Obstacles/Doors/Orange/DoorOrange.tscn",#Orange door
+	202:"Obstacles/Doors/Yellow/DoorYellow.tscn",#Yellow door
+	203:"Obstacles/Doors/Green/DoorGreen.tscn",#Green door
+	204:"Obstacles/Doors/Blue/DoorBlue.tscn",#Blue door
 
 	#300-399: Cheese
+	300:"res://src/Items/Cheese/ParentCheese.gd"
 	
 	#400-499: AI
 }
 
-func getPath(id):#Returns the scene path based on given 'id'
+func setLevelChangeFlag(l):
+	levelChangeFlag=l
+
+func getIDPath(id):#Returns the scene path based on given 'id'
 	return("res://src/"+nodeDict.get(id))
 
 func setHeld(n,id):#Changes the currently held item
