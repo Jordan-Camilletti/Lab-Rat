@@ -1,14 +1,19 @@
 extends Node
 
+var currLevel: = 002
 var inventoryOpen: = false
 var inventoryNames: = []
 var inventoryIDs: = []
 var heldName: = "Empty"
-var heldID: = 0
+var heldID: = 000
 
 var nodeDict: = {#Matches ID numbers to nodes
 	#All values here are to be added on to res://src/
 	000:"Empty",
+	
+	#001-099: Levels
+	001:"Levels/Inventory/Inventory.tscn",#Inventory
+	002:"Levels/LevelParent.tscn",#Parent level
 	
 	#100-199: Keys
 	100:"Items/Keys/Red/KeyRed.tscn",#Red key
@@ -26,6 +31,8 @@ var nodeDict: = {#Matches ID numbers to nodes
 	204:"res://src/Obstacles/Doors/Blue/DoorBlue.tscn"#Blue door
 
 	#300-399: Cheese
+	
+	#400-499: AI
 }
 
 func getPath(id):#Returns the scene path based on given 'id'

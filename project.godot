@@ -51,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Aftershock"
-run/main_scene="res://src/Levels/LevelTest.tscn"
+run/main_scene="res://src/Levels/LevelParent.tscn"
 config/icon="res://assets/icon.png"
 
 [autoload]
