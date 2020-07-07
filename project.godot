@@ -19,6 +19,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Items/Item.gd"
 }, {
+"base": "Node",
+"class": "LevelParent",
+"language": "GDScript",
+"path": "res://src/Levels/LevelParent.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "Obstacle",
 "language": "GDScript",
@@ -42,6 +47,7 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "Actor": "",
 "Item": "",
+"LevelParent": "",
 "Obstacle": "",
 "ParentCheese": "",
 "ParentDoor": "",
@@ -51,7 +57,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Aftershock"
-run/main_scene="res://src/Levels/LevelParent.tscn"
+run/main_scene="res://src/Levels/Level 1/Level1.tscn"
 config/icon="res://assets/icon.png"
 
 [autoload]
