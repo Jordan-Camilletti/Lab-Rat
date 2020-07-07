@@ -2,7 +2,6 @@ extends Actor
 
 """
 MAIN TODOs:
-	Create & test end goals(cheese)
 	Create textures and characters
 	Create & test multiple levels
 	Create animations
