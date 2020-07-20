@@ -9,3 +9,4 @@ func _on_Item_body_entered(_body):#When player collides with key
 		globalVars.inventoryNames.append(get_name())
 		globalVars.inventoryIDs.append(get_ID())
 		queue_free()
+	print("Contact")
