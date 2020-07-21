@@ -2,6 +2,7 @@ extends Actor
 
 """
 MAIN TODOs:
+	Create item queue
 	Create textures and characters
 	Create & test multiple levels
 	Create animations
