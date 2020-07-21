@@ -16,7 +16,8 @@ var nodeDict: = {#Matches ID numbers to nodes
 	
 	#001-099: Levels
 	001:"Levels/Level 1/Level1.tscn",#Level 1
-	002:"Levels/Level 2/Level2.tscn",
+	002:"Levels/Level 2/Level2.tscn",#Level 2
+	003:"Levels/Level 3/Level3.tscn",#Level 3
 	
 	#100-199: Keys
 	100:"Items/Keys/Red/KeyRed.tscn",#Red key
