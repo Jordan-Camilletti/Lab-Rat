@@ -4,10 +4,10 @@ var currLevel: = 001#Level the player is currently on
 var levelChangeFlag: = false#Flag for changing the level
 
 var inventoryOpen: = false#Flag for if the inventory is open
-var inventoryNames: = []#Inventory items
+var inventoryNames: = []#Objexts in the player's inventory
 var inventoryIDs: = []
 
-var itemQueue: = []
+var itemQueue: = []#Obects in the player's queue
 var currItem: = 0#Object the player has equipped
 var heldName: = "Empty"
 var heldID: = 000
