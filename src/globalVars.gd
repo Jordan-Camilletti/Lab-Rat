@@ -7,7 +7,8 @@ var inventoryOpen: = false#Flag for if the inventory is open
 var inventoryNames: = []#Inventory items
 var inventoryIDs: = []
 
-var heldName: = "Empty"#Obejct the player has equipped
+var currItem: = 0#Object the player has equipped
+var heldName: = "Empty"
 var heldID: = 000
 
 var nodeDict: = {#Matches ID numbers to nodes
