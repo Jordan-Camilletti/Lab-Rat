@@ -7,6 +7,7 @@ var inventoryOpen: = false#Flag for if the inventory is open
 var inventoryNames: = []#Inventory items
 var inventoryIDs: = []
 
+var itemQueue: = []
 var currItem: = 0#Object the player has equipped
 var heldName: = "Empty"
 var heldID: = 000
@@ -40,6 +41,9 @@ var nodeDict: = {#Matches ID numbers to nodes
 	
 	#400-499: AI
 }
+
+func addToQueue(item):
+	itemQueue.append(item)
 
 func setLevelChangeFlag(l):
 	levelChangeFlag=l
