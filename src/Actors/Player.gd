@@ -19,6 +19,11 @@ func _ready():
 		add.position.x=30
 		add_child(add)
 
+func _input(event):
+	if(event.is_action_pressed("itemTest")):
+		print("item")
+		globalVars.nextItem()
+
 func _physics_process(delta):
 	if(!globalVars.inventoryOpen):
 		look_at(get_global_mouse_position())#Looking at mouse
