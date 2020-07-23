@@ -52,6 +52,8 @@ func refreshInventory():
 
 func closeInventory(level):#Closing back to level
 	globalVars.inventoryOpen=false
+	if(globalVars.getHeldID()==000):
+		globalVars.nextItem()
 	get_tree().change_scene(level)
 
 func roundDown(num):#Rounds down num to the nearest whole number

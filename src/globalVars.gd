@@ -8,8 +8,7 @@ var inventoryNames: = []#Objexts in the player's inventory
 var inventoryIDs: = []
 
 var itemQueue: = []#Obects in the player's queue
-var currItem: = 0#Object the player has equipped
-var heldName: = "Empty"
+var heldName: = "Empty"#Object the player has equipped
 var heldID: = 000
 
 var nodeDict: = {#Matches ID numbers to nodes
@@ -42,18 +41,27 @@ var nodeDict: = {#Matches ID numbers to nodes
 	#400-499: AI
 }
 
-func addToQueue(item):
+func getHeldID():
+	return(heldID)
+	
+func getHeldName():
+	return(heldName)
+
+func addToQueue(item):#Adds item to queue
 	itemQueue.append(item)
 
-func setLevelChangeFlag(l):
+func setLevelChangeFlag(l):#Sets the flag for whether the game should switch to the nextt level
 	levelChangeFlag=l
 
 func getIDPath(id):#Returns the scene path based on given 'id'
 	return("res://src/"+nodeDict.get(id))
 
-func setHeld(n,id):#Changes the currently held item
-	heldName=n
-	heldID=id
+func nextItem():#Sets the currently held item to whatever's next in queue
+	var next=itemQueue.pop_front()
+	if(typeof(next)!=0):#Checking that a next item exists
+		heldID=next
+	else:
+		heldID=000
 
 func removeItem(spot):#Removes the item at 'spot'
 	var tempNames: = []
