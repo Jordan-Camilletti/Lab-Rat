@@ -7,6 +7,7 @@ var inventoryOpen: = false#Flag for if the inventory is open
 var inventoryNames: = []#Objexts in the player's inventory
 var inventoryIDs: = []
 
+var itemChangeFlag: = false#Flag for going to next item in queue
 var itemQueue: = []#Obects in the player's queue
 var heldName: = "Empty"#Object the player has equipped
 var heldID: = 000
@@ -55,6 +56,12 @@ func setLevelChangeFlag(l):#Sets the flag for whether the game should switch to 
 
 func getIDPath(id):#Returns the scene path based on given 'id'
 	return("res://src/"+nodeDict.get(id))
+
+func loadFirstItem():#Sets the held item for the first item of the queue
+	if(len(itemQueue)>0):
+		heldID=itemQueue[0]
+	else:
+		heldID=000
 
 func nextItem():#Sets the currently held item to whatever's next in queue
 	var next=itemQueue.pop_front()

@@ -24,6 +24,8 @@ func setSprite():#Swaping the door's state
 
 func _on_Detection_body_entered(_body):
 	if(!open and globalVars.heldID==key):
+		globalVars.nextItem()
+		print("HIT")
 		setOpen(!getOpen())
 		$Hitbox.set_deferred("disabled", true)
 		#get_node("Hitbox").disablwdwqeqeqe12132e
