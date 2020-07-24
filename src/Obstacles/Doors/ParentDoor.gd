@@ -26,6 +26,11 @@ func _on_Detection_body_entered(_body):
 	if(!open and globalVars.heldID==key):
 		setOpen(!getOpen())
 		$Hitbox.set_deferred("disabled", true)
+		"""TODO: setup flag for this"""
+		"""if(len(get_children())>4):#Removing the old item's sprite
+			remove_child(get_children()[4])
+		globalVars.nextItem()
+		addItem()"""
 		#get_node("Hitbox").disablwdwqeqeqe12132e
 		#$Hitbox.queue_free()
 
