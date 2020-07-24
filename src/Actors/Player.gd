@@ -13,16 +13,14 @@ var slowdownConstant: = 0.4#The 'friction' constant
 var velocity: = Vector2.ZERO
 
 func _ready():
-	if(globalVars.heldID!=0):
-		var path=load(globalVars.getIDPath(globalVars.heldID))
-		var add=path.instance()
-		add.position.x=30
-		add_child(add)
+	addItem()
 
 func _input(event):
 	if(event.is_action_pressed("itemTest")):
-		print("item")
+		if(len(get_children())>4):#Removing the old item's sprite
+			remove_child(get_children()[4])
 		globalVars.nextItem()
+		addItem()
 
 func _physics_process(delta):
 	if(!globalVars.inventoryOpen):
@@ -45,3 +43,10 @@ func getAcceleration(vel:Vector2) -> Vector2:#Getting how fast player should mov
 	for n in range(0,2):
 		rtn[n]-=(vel[n]*slowdownConstant)#Slowing down to cap the speed
 	return(rtn)
+
+func addItem():
+	if(globalVars.heldID!=0):
+		var path=load(globalVars.getIDPath(globalVars.heldID))
+		var add=path.instance()
+		add.position.x=30
+		add_child(add)

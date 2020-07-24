@@ -69,11 +69,13 @@ func nextItem():#Sets the currently held item to whatever's next in queue
 	if(heldID!=000 and len(itemQueue)<=1):
 		itemQueue.pop_front()
 		heldID=000
-	elif(len(itemQueue)>0):#Checking that a next item exists
+	#Checking that a next item exists
+	elif(len(itemQueue)>0):
 		if(heldID!=000):#Player is currently holding anything
 			itemQueue.pop_front()#Removing first item
 		next=itemQueue[0]
 		heldID=next
+	#If the queue is empty
 	else:
 		heldID=000
 
