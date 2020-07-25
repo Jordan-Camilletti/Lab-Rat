@@ -31,6 +31,7 @@ func _on_Detection_body_entered(_body):
 			remove_child(get_children()[4])
 		globalVars.nextItem()
 		addItem()"""
+		globalVars.setItemChangeFlag(true)
 		#get_node("Hitbox").disablwdwqeqeqe12132e
 		#$Hitbox.queue_free()
 

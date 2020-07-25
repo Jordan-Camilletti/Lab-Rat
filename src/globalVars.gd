@@ -51,8 +51,11 @@ func getHeldName():
 func addToQueue(item):#Adds item to queue
 	itemQueue.append(item)
 
-func setLevelChangeFlag(l):#Sets the flag for whether the game should switch to the nextt level
+func setLevelChangeFlag(l):#Sets the flag for whether the game should switch to the next level
 	levelChangeFlag=l
+	
+func setItemChangeFlag(l):#Sets the flag for when the game should go to the next item
+	itemChangeFlag=l
 
 func getIDPath(id):#Returns the scene path based on given 'id'
 	return("res://src/"+nodeDict.get(id))

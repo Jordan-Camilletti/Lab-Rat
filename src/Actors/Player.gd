@@ -15,14 +15,13 @@ var velocity: = Vector2.ZERO
 func _ready():
 	addItem()
 
-func _input(event):
-	if(event.is_action_pressed("itemTest")):
+func _physics_process(delta):
+	if(globalVars.itemChangeFlag):
 		if(len(get_children())>4):#Removing the old item's sprite
 			remove_child(get_children()[4])
 		globalVars.nextItem()
 		addItem()
-
-func _physics_process(delta):
+		globalVars.setItemChangeFlag(false)
 	if(!globalVars.inventoryOpen):
 		look_at(get_global_mouse_position())#Looking at mouse
 		#self.move_and_collide(velocity*delta)
