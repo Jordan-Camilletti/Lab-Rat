@@ -17,16 +17,17 @@ var nextLevelID
 func _ready():
 	pass
 	
-func _input(event):#Level Input
+func _physics_process(delta):
 	if(globalVars.levelChangeFlag):#Change to next level
 		globalVars.setLevelChangeFlag(false)
 		get_tree().change_scene(globalVars.getIDPath(nextLevelID))
-		#get_tree().change_scene("res://src/Levels/Level 2/Level 2.tscn")
+	
+func _input(event):#Level Input
 	if(event.is_action_pressed("exitGame")):#Quitting game
 		get_tree().quit()
-	if(!globalVars.inventoryOpen):
-		if(event.is_action_pressed("openInventory")):#Open inventory
-			loadInventory()
+	if(event.is_action_pressed("openInventory") and !globalVars.inventoryOpen):#Open inventory
+		loadInventory()
+	
 
 func loadInventory():#Loads the inventory sreen
 	globalVars.inventoryOpen=true
