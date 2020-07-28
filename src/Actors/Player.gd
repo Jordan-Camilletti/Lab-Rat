@@ -2,6 +2,9 @@ extends Actor
 
 """
 MAIN TODOs:
+	Fix bug w/ inventory reseting player to level 1
+	Have inventory clear when swapping levels
+	
 	Create textures and characters
 	Create & test multiple levels
 	Create animations
