@@ -3,6 +3,7 @@ extends Actor
 """
 MAIN TODOs:
 	Have inventory clear when swapping levels
+	Fix bug w/ inventory squares now showing
 	
 	Create textures and characters
 	Create & test multiple levels

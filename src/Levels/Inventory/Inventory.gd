@@ -11,6 +11,7 @@ func _input(event):#Inventory Input
 	if(event.is_action_pressed("clickItem")):#Clicking on item
 		var mousePos=get_global_mouse_position()#Getting item square
 		var square=getInventorySquare(mousePos.x,mousePos.y)
+		print(square)
 		if(square>=0 and square<len(globalVars.inventoryIDs)):#Adding it to queue
 			globalVars.addToQueue(globalVars.inventoryIDs[square])
 			globalVars.removeItem(square)
