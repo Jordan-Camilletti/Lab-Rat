@@ -7,6 +7,7 @@ func _input(event):#Inventory Input
 	if(event.is_action_pressed("exitGame")):#Quit game
 		get_tree().quit()
 	if(event.is_action_pressed("openInventory")):#Go back to level
+		print(globalVars.currLevel)
 		closeInventory(globalVars.getIDPath(globalVars.currLevel))
 	if(event.is_action_pressed("clickItem")):#Clicking on item
 		var mousePos=get_global_mouse_position()#Getting item square

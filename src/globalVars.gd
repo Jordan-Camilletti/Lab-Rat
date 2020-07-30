@@ -56,6 +56,9 @@ func setLevelChangeFlag(l):#Sets the flag for whether the game should switch to 
 	
 func setItemChangeFlag(l):#Sets the flag for when the game should go to the next item
 	itemChangeFlag=l
+	
+func setCurrLevel(l):#Used to set the level the inventory goes to
+	currLevel=l
 
 func getIDPath(id):#Returns the scene path based on given 'id'
 	return("res://src/"+nodeDict.get(id))

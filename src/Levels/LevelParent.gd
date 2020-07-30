@@ -20,6 +20,7 @@ func _ready():
 func _physics_process(delta):
 	if(globalVars.levelChangeFlag):#Change to next level
 		globalVars.setLevelChangeFlag(false)
+		globalVars.setCurrLevel(nextLevelID)
 		get_tree().change_scene(globalVars.getIDPath(nextLevelID))
 	
 func _input(event):#Level Input
