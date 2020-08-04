@@ -2,8 +2,6 @@ extends Actor
 
 """
 MAIN TODOs:
-	Fix bug w/ inventory squares now showing
-	
 	Create textures and characters
 	Create & test multiple levels
 	Create animations
