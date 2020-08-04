@@ -68,6 +68,11 @@ func getIDPath(id):#Returns the scene path based on given 'id'
 		heldID=itemQueue[0]
 	else:
 		heldID=000"""
+		
+func clearInventory():#Clear the inventory between levels
+	inventoryIDs.clear()
+	inventoryNames.clear()
+	itemQueue.clear()
 
 func nextItem():#Sets the currently held item to whatever's next in queue
 	var next
