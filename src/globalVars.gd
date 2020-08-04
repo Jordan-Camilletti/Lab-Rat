@@ -73,6 +73,8 @@ func clearInventory():#Clear the inventory between levels
 	inventoryIDs.clear()
 	inventoryNames.clear()
 	itemQueue.clear()
+	heldName=""
+	heldID=000
 
 func nextItem():#Sets the currently held item to whatever's next in queue
 	var next
