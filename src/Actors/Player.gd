@@ -2,6 +2,8 @@ extends Actor
 
 """
 MAIN TODOs:
+	Have inventory be arrangable
+	
 	Create textures and characters
 	Create & test multiple levels
 	Create animations
