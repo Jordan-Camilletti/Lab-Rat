@@ -92,7 +92,7 @@ func nextItem():#Sets the currently held item to whatever's next in queue
 	else:
 		heldID=000
 
-func removeItem(spot):#Removes the item at 'spot'
+func removeItem(spot):#Removes the item at 'spot' from inventory
 	var tempNames: = []
 	var tempIDs: = []
 	for n in range(len(inventoryNames)):

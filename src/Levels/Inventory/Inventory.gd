@@ -11,12 +11,17 @@ func _input(event):#Inventory Input
 	if(event.is_action_pressed("clickItem")):#Clicking on item
 		var mousePos=get_global_mouse_position()#Getting item square
 		var square=getInventorySquare(mousePos.x,mousePos.y)
-		print(square)
 		if(square==-1):#Rearranging items in queue
+			print(int(mousePos.x/64))
 			var selectedItem=0
-		if(square>=0 and square<len(globalVars.inventoryIDs)):#Adding it to queue
+		elif(square>=0 and square<len(globalVars.inventoryIDs)):#Adding it to queue
+			"""
+			TODO: fix graphics bug with this
+			"""
 			globalVars.addToQueue(globalVars.inventoryIDs[square])
+			print(globalVars.inventoryIDs)
 			globalVars.removeItem(square)
+			print(globalVars.inventoryIDs)
 			refreshInventory()
 		
 func getInventorySquare(xPos,yPos):#Returns the inventory square of current mouse position
