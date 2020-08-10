@@ -15,13 +15,8 @@ func _input(event):#Inventory Input
 			print(int(mousePos.x/64))
 			var selectedItem=0
 		elif(square>=0 and square<len(globalVars.inventoryIDs)):#Adding it to queue
-			"""
-			TODO: fix graphics bug with this
-			"""
 			globalVars.addToQueue(globalVars.inventoryIDs[square])
-			print(globalVars.inventoryIDs)
 			globalVars.removeItem(square)
-			print(globalVars.inventoryIDs)
 			refreshInventory()
 		
 func getInventorySquare(xPos,yPos):#Returns the inventory square of current mouse position
@@ -33,8 +28,8 @@ func getInventorySquare(xPos,yPos):#Returns the inventory square of current mous
 	
 func clearInventoryItems():#Clears all items from the inventory
 	var node
-	while(self.get_child_count()>7):
-		node=self.get_children()[7]
+	while(self.get_child_count()>2):
+		node=self.get_children()[2]
 		self.remove_child(node)
 		node.queue_free()
 	
