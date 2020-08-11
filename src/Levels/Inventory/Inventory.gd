@@ -12,7 +12,7 @@ func _input(event):#Inventory Input
 		var mousePos=get_global_mouse_position()#Getting item square
 		var square=getInventorySquare(mousePos.x,mousePos.y)
 		if(square==-1):#Rearranging items in queue
-			print(int(mousePos.x/64))
+			print(int(mousePos.x/128))
 			var selectedItem=0
 		elif(square>=0 and square<len(globalVars.inventoryIDs)):#Adding it to queue
 			globalVars.addToQueue(globalVars.inventoryIDs[square])
