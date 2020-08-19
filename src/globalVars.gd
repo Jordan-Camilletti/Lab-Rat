@@ -8,7 +8,8 @@ var inventoryNames: = []#Objexts in the player's inventory
 var inventoryIDs: = []
 
 var itemChangeFlag: = false#Flag for going to next item in queue
-var itemQueue: = []#Obects in the player's queue
+var queueNames: = []#Obects in the player's queue
+var queueIDs: = []
 var heldName: = "Empty"#Object the player has equipped
 var heldID: = 000
 
@@ -48,8 +49,13 @@ func getHeldID():
 func getHeldName():
 	return(heldName)
 
-func addToQueue(item):#Adds item to queue
-	itemQueue.append(item)
+func addToInventory(itemName, ID):#Adds item to inventory
+	inventoryNames.append(itemName)
+	inventoryIDs.append(ID)
+
+func addToQueue(itemName, ID):#Adds item to queue
+	queueNames.append(itemName)
+	queueIDs.append(ID)
 
 func setLevelChangeFlag(l):#Sets the flag for whether the game should switch to the next level
 	levelChangeFlag=l
