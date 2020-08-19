@@ -78,21 +78,22 @@ func getIDPath(id):#Returns the scene path based on given 'id'
 func clearInventory():#Clear the inventory between levels
 	inventoryIDs.clear()
 	inventoryNames.clear()
-	itemQueue.clear()
+	queueIDs.clear()
+	queueNames.clear()
 	heldName=""
 	heldID=000
 
 func nextItem():#Sets the currently held item to whatever's next in queue
 	var next
 	#Checking that the last item isn't what the player has equipped
-	if(heldID!=000 and len(itemQueue)<=1):
-		itemQueue.pop_front()
+	if(heldID!=000 and len(queueIDs)<=1):
+		queueIDs.pop_front()
 		heldID=000
 	#Checking that a next item exists
-	elif(len(itemQueue)>0):
+	elif(len(queueIDs)>0):
 		if(heldID!=000):#Player is currently holding anything
-			itemQueue.pop_front()#Removing first item
-		next=itemQueue[0]
+			queueIDs.pop_front()#Removing first item
+		next=queueIDs[0]
 		heldID=next
 	#If the queue is empty
 	else:

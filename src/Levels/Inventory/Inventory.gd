@@ -20,14 +20,14 @@ func _input(event):#Inventory Input
 			"""TODO:
 				WORK ON ME"""
 			var queueX=int(mousePos.x/128)
-			var queueY=int(mousePos.y/100) * ((len(globalVars.itemQueue)-1)/queueXLen)
+			var queueY=int(mousePos.y/100) * ((len(globalVars.queueIDs)-1)/queueXLen)
 			#print(int(mousePos.x/128))#Queue x-pos
 			#print(int(mousePos.y/100) * ((len(globalVars.itemQueue)-1)/queueXLen))#Queue y-pos
 			#print("\n")
 			var selectedItem=(queueX + (queueY*queueXLen))
 			print(globalVars.globalQueueNames)
 		elif(square>=0 and square<len(globalVars.inventoryIDs)):#Adding it to queue
-			globalVars.addToQueue(globalVars.inventoryIDs[square])
+			globalVars.addToQueue(globalVars.inventoryNames[square],globalVars.inventoryIDs[square])
 			globalVars.removeItem(square)
 			refreshInventory()
 		
@@ -59,9 +59,9 @@ func refreshInventory():
 		add_child(add)
 		
 	#Adding back queue
-	var queueLen=len(globalVars.itemQueue)#Length of items in queue
+	var queueLen=len(globalVars.queueIDs)#Length of items in queue
 	for n in range(queueLen):
-		add=load(globalVars.getIDPath(globalVars.itemQueue[n])).instance()
+		add=load(globalVars.getIDPath(globalVars.queueIDs[n])).instance()
 		add.position.x=(128*(n%queueXLen))+64#X position for the item to be added at
 		add.position.y=(100 * (n/queueXLen)) + (100 / (((queueLen-1)/queueXLen)+1))#Y position for the item to be added at
 		add_child(add)
