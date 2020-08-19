@@ -47,10 +47,12 @@ func refreshInventory():
 		add_child(add)
 		
 	#Adding back queue
-	for n in range(len(globalVars.itemQueue)):
+	#if(len(globalVars.itemQueue)<=8):
+	var queueLen=len(globalVars.itemQueue)#Length of items in queue
+	for n in range(queueLen):
 		add=load(globalVars.getIDPath(globalVars.itemQueue[n])).instance()
-		add.position.x=(128*(n%8))+64
-		add.position.y=(40*(n/8))+100
+		add.position.x=(128*(n%8))+64#X position for the item to be added at
+		add.position.y=(100*(n/8)) + (100/((queueLen/8)+1))#Y position for the item to be added at
 		add_child(add)
 
 func closeInventory(level):#Closing back to level
