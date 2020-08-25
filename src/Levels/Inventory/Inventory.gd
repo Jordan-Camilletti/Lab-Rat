@@ -19,13 +19,15 @@ func _input(event):#Inventory Input
 		if(square==-1):#Rearranging items in queue
 			"""TODO:
 				WORK ON ME"""
+			var queueLen=len(globalVars.queueIDs)#Length of items in queue
 			var queueX=int(mousePos.x/128)
-			var queueY=int(mousePos.y/100) * ((len(globalVars.queueIDs)-1)/queueXLen)
+			var queueY=int(mousePos.y/100) * ((queueLen-1)/queueXLen)
 			#print(int(mousePos.x/128))#Queue x-pos
 			#print(int(mousePos.y/100) * ((len(globalVars.itemQueue)-1)/queueXLen))#Queue y-pos
 			#print("\n")
 			var selectedItem=(queueX + (queueY*queueXLen))
-			print(globalVars.globalQueueNames)
+			if(selectedItem<queueLen):
+				print(globalVars.queueNames[selectedItem])
 		elif(square>=0 and square<len(globalVars.inventoryIDs)):#Adding it to queue
 			globalVars.addToQueue(globalVars.inventoryNames[square],globalVars.inventoryIDs[square])
 			globalVars.removeItem(square)
