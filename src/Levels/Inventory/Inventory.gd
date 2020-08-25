@@ -17,17 +17,22 @@ func _input(event):#Inventory Input
 		var mousePos=get_global_mouse_position()#Getting item square
 		var square=getInventorySquare(mousePos.x,mousePos.y)
 		if(square==-1):#Rearranging items in queue
-			"""TODO:
-				WORK ON ME"""
-			var queueLen=len(globalVars.queueIDs)#Length of items in queue
+			if(mousePos.x>3 and mousePos.x<83 and mousePos.y>3 and mousePos.y<36):#Clear button was pressed
+				for item in range(len(globalVars.queueIDs)):#Moving queue items back to inventory
+					globalVars.addToInventory(globalVars.queueNames[item], globalVars.queueIDs[item])
+				globalVars.clearQueue()#Clearing queue
+				
+				globalVars.nextItem()#Setting held item to empty
+				refreshInventory()#Refreshing sprites
+				
+			#Code for rearranging items
+			"""var queueLen=len(globalVars.queueIDs)#Length of items in queue
 			var queueX=int(mousePos.x/128)
 			var queueY=int(mousePos.y/100) * ((queueLen-1)/queueXLen)
-			#print(int(mousePos.x/128))#Queue x-pos
-			#print(int(mousePos.y/100) * ((len(globalVars.itemQueue)-1)/queueXLen))#Queue y-pos
-			#print("\n")
 			var selectedItem=(queueX + (queueY*queueXLen))
 			if(selectedItem<queueLen):
-				print(globalVars.queueNames[selectedItem])
+				print(globalVars.queueNames[selectedItem])"""
+				
 		elif(square>=0 and square<len(globalVars.inventoryIDs)):#Adding it to queue
 			globalVars.addToQueue(globalVars.inventoryNames[square],globalVars.inventoryIDs[square])
 			globalVars.removeItem(square)

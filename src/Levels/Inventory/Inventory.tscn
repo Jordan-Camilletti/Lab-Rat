@@ -8,7 +8,7 @@
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 509.949, 300 )
+position = Vector2( 512, 300 )
 texture = ExtResource( 2 )
 
 [node name="Selected" parent="." instance=ExtResource( 3 )]

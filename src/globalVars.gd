@@ -75,11 +75,17 @@ func getIDPath(id):#Returns the scene path based on given 'id'
 	else:
 		heldID=000"""
 		
-func clearInventory():#Clear the inventory between levels
+func clearInventory():#Clears inventory
 	inventoryIDs.clear()
 	inventoryNames.clear()
+	
+func clearQueue():#Clear queue
 	queueIDs.clear()
 	queueNames.clear()
+		
+func clearAllInventory():#Clear player's whole storage between levels
+	clearInventory()
+	clearQueue()
 	heldName=""
 	heldID=000
 
