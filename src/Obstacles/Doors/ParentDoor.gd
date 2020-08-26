@@ -26,6 +26,7 @@ func _on_Detection_body_entered(_body):
 	if(!open and globalVars.heldID==key):
 		setOpen(!getOpen())
 		$Hitbox.set_deferred("disabled", true)
+		globalVars.setItemChangeFlag(true)
 		#get_node("Hitbox").disablwdwqeqeqe12132e
 		#$Hitbox.queue_free()
 

@@ -1,5 +1,10 @@
 extends Node2D
 
+#Lengths of queue and inventory, used for doing math
+var queueXLen=8
+var inventoryXLen=4
+var inventoryYLen=2
+
 func _ready():
 	refreshInventory()
 
@@ -8,29 +13,42 @@ func _input(event):#Inventory Input
 		get_tree().quit()
 	if(event.is_action_pressed("openInventory")):#Go back to level
 		closeInventory(globalVars.getIDPath(globalVars.currLevel))
-	if(event.is_action_pressed("clickItem")):
-		var mousePos=get_global_mouse_position()
+	if(event.is_action_pressed("clickItem")):#Clicking on item
+		var mousePos=get_global_mouse_position()#Getting item square
 		var square=getInventorySquare(mousePos.x,mousePos.y)
-		if(square>=0 and square<len(globalVars.inventoryIDs)):
-			var newName=globalVars.inventoryNames[square]
-			var newID=globalVars.inventoryIDs[square]
-			globalVars.setHeld(newName,newID)
+		if(square==-1):#Rearranging items in queue
+			if(mousePos.x>3 and mousePos.x<83 and mousePos.y>3 and mousePos.y<36):#Clear button was pressed
+				for item in range(len(globalVars.queueIDs)):#Moving queue items back to inventory
+					globalVars.addToInventory(globalVars.queueNames[item], globalVars.queueIDs[item])
+				globalVars.clearQueue()#Clearing queue
+				
+				globalVars.nextItem()#Setting held item to empty
+				refreshInventory()#Refreshing sprites
+				
+			#Code for rearranging items
+			"""var queueLen=len(globalVars.queueIDs)#Length of items in queue
+			var queueX=int(mousePos.x/128)
+			var queueY=int(mousePos.y/100) * ((queueLen-1)/queueXLen)
+			var selectedItem=(queueX + (queueY*queueXLen))
+			if(selectedItem<queueLen):
+				print(globalVars.queueNames[selectedItem])"""
+				
+		elif(square>=0 and square<len(globalVars.inventoryIDs)):#Adding it to queue
+			globalVars.addToQueue(globalVars.inventoryNames[square],globalVars.inventoryIDs[square])
 			globalVars.removeItem(square)
 			refreshInventory()
 		
-func getInventorySquare(xPos,yPos):
-	if(xPos>(128-(145/2)) and xPos<=(128+(145/2)) and yPos>(300-(188/2)) and yPos<=(300+(188/2))):
-		return(-2)#Currently held square
-	var xSquare=roundDown(xPos/256)-1
-	var ySquare=roundDown(yPos/200)
-	if(xSquare<0 or xSquare>=3 or ySquare<0 or ySquare>=3):
+func getInventorySquare(xPos,yPos):#Returns the inventory square of current mouse position
+	var xSquare=roundDown(xPos/256)
+	var ySquare=roundDown(yPos/200)-1
+	if(xSquare<0 or xSquare>=inventoryXLen or ySquare<0 or ySquare>=inventoryXLen):
 		return(-1)
-	return(xSquare+(ySquare*3))
+	return(xSquare+(ySquare*inventoryXLen))
 	
-func clearInventoryItems():
+func clearInventoryItems():#Clears all items from the inventory
 	var node
-	while(self.get_child_count()>11):
-		node=self.get_children()[11]
+	while(self.get_child_count()>inventoryYLen):
+		node=self.get_children()[inventoryYLen]
 		self.remove_child(node)
 		node.queue_free()
 	
@@ -43,25 +61,24 @@ func refreshInventory():
 	for n in range(len(globalVars.inventoryIDs)):
 		#Creating a new instance based off link from inventoryID and nodeDict, then adding it to inventory square
 		add=load(globalVars.getIDPath(globalVars.inventoryIDs[n])).instance()
-		add.position.x=(256*(n%3))+384
-		add.position.y=(200*(n/3))+100
+		add.position.x=(256*(n%inventoryXLen))+128
+		add.position.y=(200*(n/inventoryXLen))+300
 		add_child(add)
-	
-	#Adding held object
-	if(globalVars.heldID!=0):
-		add=load(globalVars.getIDPath(globalVars.heldID)).instance()
-		add.position.x=(128)
-		add.position.y=(300)
+		
+	#Adding back queue
+	var queueLen=len(globalVars.queueIDs)#Length of items in queue
+	for n in range(queueLen):
+		add=load(globalVars.getIDPath(globalVars.queueIDs[n])).instance()
+		add.position.x=(128*(n%queueXLen))+64#X position for the item to be added at
+		add.position.y=(100 * (n/queueXLen)) + (100 / (((queueLen-1)/queueXLen)+1))#Y position for the item to be added at
 		add_child(add)
 
 func closeInventory(level):#Closing back to level
 	globalVars.inventoryOpen=false
+	if(globalVars.getHeldID()==000):
+		globalVars.nextItem()
 	get_tree().change_scene(level)
 
 func roundDown(num):#Rounds down num to the nearest whole number
 	var rtn=str(num).split(".")
 	return(int(rtn[0]))
-
-#TODO: work on this
-func moveItem(itemID, itemName):
-	pass

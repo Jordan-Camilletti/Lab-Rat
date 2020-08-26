@@ -25,8 +25,8 @@ shape = SubResource( 1 )
 [node name="Camera" type="Camera2D" parent="."]
 current = true
 
-[node name="OrbPickup" type="Area2D" parent="."]
+[node name="ItemPickup" type="Area2D" parent="."]
 collision_mask = 10
 
-[node name="OrbPickupBox" type="CollisionShape2D" parent="OrbPickup"]
+[node name="ItemPickupBox" type="CollisionShape2D" parent="ItemPickup"]
 shape = SubResource( 2 )
