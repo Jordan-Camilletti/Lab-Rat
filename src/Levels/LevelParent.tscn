@@ -1,17 +1,7 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/Items/Keys/Green/KeyGreen.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/Items/Keys/Orange/KeyOrange.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/Items/Keys/Yellow/KeyYellow.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/Obstacles/Doors/Blue/DoorBlue.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/Items/Keys/Blue/KeyBlue.tscn" type="PackedScene" id=6]
-[ext_resource path="res://src/Items/Keys/Red/KeyRed.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/Obstacles/Doors/Green/DoorGreen.tscn" type="PackedScene" id=8]
-[ext_resource path="res://src/Obstacles/Doors/Orange/DoorOrange.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Items/Cheese/ParentCheese.tscn" type="PackedScene" id=10]
-[ext_resource path="res://src/Obstacles/Doors/Red/DoorRed.tscn" type="PackedScene" id=11]
-[ext_resource path="res://src/Obstacles/Doors/Yellow/DoorYellow.tscn" type="PackedScene" id=12]
 [ext_resource path="res://src/Levels/LevelParent.gd" type="Script" id=13]
 [ext_resource path="res://assets/tilemap.png" type="Texture" id=14]
 
@@ -86,43 +76,8 @@ collision_mask = 55
 format = 1
 tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 65536, 1, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 1, 0, 131072, 1, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 0, 0, 196611, 1, 0, 196612, 0, 0, 196613, 1, 0, 196614, 0, 0, 196615, 1, 0, 196616, 0, 0, 196617, 1, 0, 196618, 0, 0, 196619, 1, 0, 262144, 1, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 3, 0, 327680, 1, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 1, 0, 393216, 1, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 2, 0, 458752, 1, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 1, 0, 524288, 1, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0 )
 
-[node name="KeyBlue" parent="." instance=ExtResource( 6 )]
-position = Vector2( 240, 576 )
-
-[node name="KeyGreen" parent="." instance=ExtResource( 2 )]
-position = Vector2( 432, 576 )
-
-[node name="KeyOrange" parent="." instance=ExtResource( 3 )]
-position = Vector2( 624, 576 )
-
-[node name="KeyRed" parent="." instance=ExtResource( 7 )]
-position = Vector2( 816, 576 )
-
-[node name="KeyYellow" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1008, 576 )
-
 [node name="Cheese" parent="." instance=ExtResource( 10 )]
 position = Vector2( 624, 192 )
 
-[node name="DoorBlue" parent="." instance=ExtResource( 5 )]
-position = Vector2( 240, 336 )
-
-[node name="DoorGreen" parent="." instance=ExtResource( 8 )]
-position = Vector2( 432, 336 )
-
-[node name="DoorOrange" parent="." instance=ExtResource( 9 )]
-position = Vector2( 624, 336 )
-
-[node name="DoorRed" parent="." instance=ExtResource( 11 )]
-position = Vector2( 816, 336 )
-
-[node name="DoorYellow" parent="." instance=ExtResource( 12 )]
-position = Vector2( 1008, 336 )
-
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 628.939, 472.756 )
-[connection signal="body_entered" from="KeyBlue" to="KeyBlue" method="_on_Key_body_entered"]
-[connection signal="body_entered" from="KeyGreen" to="KeyGreen" method="_on_Key_body_entered"]
-[connection signal="body_entered" from="KeyOrange" to="KeyOrange" method="_on_Key_body_entered"]
-[connection signal="body_entered" from="KeyRed" to="KeyRed" method="_on_Key_body_entered"]
-[connection signal="body_entered" from="KeyYellow" to="KeyYellow" method="_on_Key_body_entered"]
