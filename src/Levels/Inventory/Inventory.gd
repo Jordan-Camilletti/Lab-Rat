@@ -18,8 +18,8 @@ func _input(event):#Inventory Input
 		var square=getInventorySquare(mousePos.x,mousePos.y)
 		if(square==-1):#Rearranging items in queue
 			if(mousePos.x>3 and mousePos.x<83 and mousePos.y>3 and mousePos.y<36):#Clear button was pressed
-				for item in range(len(globalVars.queueIDs)):#Moving queue items back to inventory
-					globalVars.addToInventory(globalVars.queueNames[item], globalVars.queueIDs[item])
+				#for item in range(len(globalVars.queueIDs)):#Moving queue items back to inventory
+				#	globalVars.addToInventory(globalVars.queueNames[item], globalVars.queueIDs[item])
 				globalVars.clearQueue()#Clearing queue
 				
 				globalVars.nextItem()#Setting held item to empty
@@ -45,7 +45,7 @@ func getInventorySquare(xPos,yPos):#Returns the inventory square of current mous
 		return(-1)
 	return(xSquare+(ySquare*inventoryXLen))
 	
-func clearInventoryItems():#Clears all items from the inventory
+func clearInventorySprites():#Clears all items from the inventory
 	var node
 	while(self.get_child_count()>inventoryYLen):
 		node=self.get_children()[inventoryYLen]
@@ -54,7 +54,7 @@ func clearInventoryItems():#Clears all items from the inventory
 	
 func refreshInventory():
 	#Clearing old items
-	clearInventoryItems()
+	clearInventorySprites()
 	
 	#Adding back new inventory
 	var add
@@ -75,6 +75,7 @@ func refreshInventory():
 
 func closeInventory(level):#Closing back to level
 	globalVars.inventoryOpen=false
+	globalVars.clearInventory()
 	if(globalVars.getHeldID()==000):
 		globalVars.nextItem()
 	get_tree().change_scene(level)

@@ -28,7 +28,8 @@ position = Vector2( 1584, 624 )
 scale = Vector2( 1.15, 1.06897 )
 
 [node name="KeyYellow" parent="." index="5" instance=ExtResource( 5 )]
-position = Vector2( 645.899, 555.347 )
+position = Vector2( 153.576, 714.953 )
+rotation = -2.16246
 scale = Vector2( 1.15, 1.06897 )
 
 [node name="DoorYellow" parent="." index="6" instance=ExtResource( 6 )]
