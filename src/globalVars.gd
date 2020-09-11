@@ -24,19 +24,28 @@ var nodeDict: = {#Matches ID numbers to nodes
 	004:"Levels/Level 4/Level4.tscn",#Level 4
 	
 	#100-199: Keys
-	100:"Items/Keys/Red/KeyRed.tscn",#Red key
-	101:"Items/Keys/Orange/KeyOrange.tscn",#Orange key
-	102:"Items/Keys/Yellow/KeyYellow.tscn",#Yellow key
-	103:"Items/Keys/Green/KeyGreen.tscn",#Green key
-	104:"Items/Keys/Blue/KeyBlue.tscn",#Blue key
+	100:"Items/Keys/Red/KeyRed.tscn",#Red Key
+	101:"Items/Keys/Orange/KeyOrange.tscn",#Orange Key
+	102:"Items/Keys/Yellow/KeyYellow.tscn",#Yellow Key
+	103:"Items/Keys/Green/KeyGreen.tscn",#Green Key
+	104:"Items/Keys/Blue/KeyBlue.tscn",#Blue Key
 	
 	#200-299: Doors
-	#200:"Items/Doors/Test/TestDoor.tscn"#Test door(TESTING ONLY)
-	200:"Obstacles/Doors/Red/DoorRed.tscn",#Red door
-	201:"Obstacles/Doors/Orange/DoorOrange.tscn",#Orange door
-	202:"Obstacles/Doors/Yellow/DoorYellow.tscn",#Yellow door
-	203:"Obstacles/Doors/Green/DoorGreen.tscn",#Green door
-	204:"Obstacles/Doors/Blue/DoorBlue.tscn",#Blue door
+	200:"Obstacles/Doors/Red/DoorRed.tscn",#Small Red Door
+	#201:#Medium Red Door
+	#202:#Large Red Door
+	203:"Obstacles/Doors/Orange/DoorOrange.tscn",#Small 
+	#204:#Medium Orange Door
+	#205:#Large Orange Door
+	206:"Obstacles/Doors/Yellow/DoorYellow.tscn",#Small Yellow Door
+	#207:#Medium Yellow Door
+	#208:#Large Yellow Door
+	209:"Obstacles/Doors/Green/DoorGreen.tscn",#Small Green Door
+	#210:#Medium Green Door
+	#211:#Large Green Door
+	212:"Obstacles/Doors/Blue/DoorBlue.tscn",#Small Blue Door
+	#213:#Medium Blue Door
+	#214:#Large Blue Door
 
 	#300-399: Cheese
 	300:"res://src/Items/Cheese/ParentCheese.gd"

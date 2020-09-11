@@ -8,7 +8,7 @@ MAIN TODOs:
 	Create & test multiple levels
 	Create animations
 """
-var walkAcceleration: = 80#Base walk speed
+var walkAcceleration: = 120#Base walk speed
 var runMultiplier: = 1.5#How much faster running is compared to walking
 var slowdownConstant: = 0.4#The 'friction' constant
 var velocity: = Vector2.ZERO
