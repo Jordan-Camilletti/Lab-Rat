@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/closed.png-0ee746c6c9626002b61e17f826a11e3f.stex"
+path="res://.import/closed.png-b1967b311c8be675d4fe67fdb8715dea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Doors/Purple/closed.png"
-dest_files=[ "res://.import/closed.png-0ee746c6c9626002b61e17f826a11e3f.stex" ]
+source_file="res://assets/Doors/Yellow/Small/closed.png"
+dest_files=[ "res://.import/closed.png-b1967b311c8be675d4fe67fdb8715dea.stex" ]
 
 [params]
 
