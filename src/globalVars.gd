@@ -31,19 +31,19 @@ var nodeDict: = {#Matches ID numbers to nodes
 	104:"Items/Keys/Blue/KeyBlue.tscn",#Blue Key
 	
 	#200-299: Doors
-	200:"Obstacles/Doors/Red/DoorRed.tscn",#Small Red Door
+	200:"Obstacles/Doors/Red/Small/SmallDoorRed.tscn",#Small Red Door
 	#201:#Medium Red Door
 	#202:#Large Red Door
-	203:"Obstacles/Doors/Orange/DoorOrange.tscn",#Small 
+	201:"Obstacles/Doors/Orange/Small/SmallDoorOrange.tscn",#Small 
 	#204:#Medium Orange Door
 	#205:#Large Orange Door
-	206:"Obstacles/Doors/Yellow/DoorYellow.tscn",#Small Yellow Door
+	202:"Obstacles/Doors/Yellow/Small/SmallDoorYellow.tscn",#Small Yellow Door
 	#207:#Medium Yellow Door
 	#208:#Large Yellow Door
-	209:"Obstacles/Doors/Green/DoorGreen.tscn",#Small Green Door
+	203:"Obstacles/Doors/Green/Small/SmallDoorGreen.tscn",#Small Green Door
 	#210:#Medium Green Door
 	#211:#Large Green Door
-	212:"Obstacles/Doors/Blue/DoorBlue.tscn",#Small Blue Door
+	204:"Obstacles/Doors/Blue/Small/SmallDoorBlue.tscn",#Small Blue Door
 	#213:#Medium Blue Door
 	#214:#Large Blue Door
 
