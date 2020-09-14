@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/keyRed.png-eff6f27cd97f65c91d8b10f9360aa208.stex"
+path="res://.import/keyRed.png-7cb9050949acf48190b59cd446c4a8ce.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Keys/keyRed.png"
-dest_files=[ "res://.import/keyRed.png-eff6f27cd97f65c91d8b10f9360aa208.stex" ]
+source_file="res://assets/Keys/Red/keyRed.png"
+dest_files=[ "res://.import/keyRed.png-7cb9050949acf48190b59cd446c4a8ce.stex" ]
 
 [params]
 

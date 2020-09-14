@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/keyBlue.png-8e1a9784253f9fc19e4b268489e54313.stex"
+path="res://.import/MediumDoorBase.png-f1a08f1ce16567dc44d42d1aa046cec8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Keys/keyBlue.png"
-dest_files=[ "res://.import/keyBlue.png-8e1a9784253f9fc19e4b268489e54313.stex" ]
+source_file="res://assets/Doors/Template/MediumDoorBase.png"
+dest_files=[ "res://.import/MediumDoorBase.png-f1a08f1ce16567dc44d42d1aa046cec8.stex" ]
 
 [params]
 
